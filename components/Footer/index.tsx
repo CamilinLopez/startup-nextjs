@@ -30,7 +30,7 @@ const Footer = () => {
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis kjnklkml.
+                  Integer lobortis.
                 </p>
                 <div className="flex items-center">
                   <a
