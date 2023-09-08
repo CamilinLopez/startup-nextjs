@@ -20,12 +20,12 @@ const brandsData: Brand[] = [
     href: "https://nodejs.org/es",
     image: "/images/brands/newImages/nodejs.svg",
   },
-  {
-    id: 4,
-    name: "Webpay",
-    href: "https://www.webpay.cl",
-    image: "/images/brands/newImages/webpay.svg",
-  },
+  // {
+  //   id: 4,
+  //   name: "Webpay",
+  //   href: "https://www.webpay.cl",
+  //   image: "/images/brands/newImages/webpay.svg",
+  // },
   {
     id: 5,
     name: "Supabase",
@@ -92,7 +92,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, name } = brand;
 
   return (
-    <div className="mx-3 flex w-full max-w-[160px] flex-col items-center justify-center py-[15px] sm:mx-4 lg:max-w-[130px] xl:mx-6 xl:max-w-[150px] 2xl:mx-8 2xl:max-w-[160px]">
+    <div className="mx-3 flex w-full max-w-[140px] flex-col items-center justify-center py-[15px] sm:mx-4 lg:max-w-[130px] xl:mx-6 xl:max-w-[150px] 2xl:mx-8 2xl:max-w-[160px]">
       <a
         href={href}
         target="_blank"
