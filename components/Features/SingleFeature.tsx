@@ -1,10 +1,11 @@
 import { Feature } from "@/types/feature";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { week, title, paragraph } = feature;
+  const { icon, week, title, paragraph } = feature;
   return (
     <div className="w-full">
       <div className="wow fadeInUp" data-wow-delay=".15s">
+        <div className="my-6">{icon}</div>
         <div className="mb-10 flex h-[30px] w-[100px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
           {week}
         </div>
