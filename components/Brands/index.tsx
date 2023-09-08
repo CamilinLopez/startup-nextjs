@@ -20,12 +20,12 @@ const brandsData: Brand[] = [
     href: "https://nodejs.org/es",
     image: "/images/brands/newImages/nodejs.svg",
   },
-  // {
-  //   id: 4,
-  //   name: "Webpay",
-  //   href: "https://www.webpay.cl",
-  //   image: "/images/brands/newImages/webpay.svg",
-  // },
+  {
+    id: 4,
+    name: "Webpay",
+    href: "https://www.webpay.cl",
+    image: "/images/brands/newImages/webpay.svg",
+  },
   {
     id: 5,
     name: "Supabase",
