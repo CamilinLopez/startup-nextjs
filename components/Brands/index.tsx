@@ -33,7 +33,7 @@ const brandsData: Brand[] = [
   {
     id: 5,
     name: "Supabase",
-    description: "Platform",
+    description: "Authentication",
     href: "https://supabase.com/",
     image: "/images/brands/newImages/supabase.svg",
   },
