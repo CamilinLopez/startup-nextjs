@@ -5,60 +5,70 @@ const brandsData: Brand[] = [
   {
     id: 1,
     name: "Mongo DB",
+    description: "Database",
     href: "https://www.mongodb.com/es",
     image: "/images/brands/newImages/mongo.svg",
   },
   {
     id: 2,
     name: "Next JS",
+    description: "Framework",
     href: "https://nextjs.org/",
     image: "/images/brands/newImages/next.svg",
   },
   {
     id: 3,
     name: "Node JS",
+    description: "Database",
     href: "https://nodejs.org/es",
     image: "/images/brands/newImages/nodejs.svg",
   },
   {
     id: 4,
     name: "Webpay",
+    description: "payment",
     href: "https://www.webpay.cl",
     image: "/images/brands/newImages/webpay.svg",
   },
   {
     id: 5,
     name: "Supabase",
+    description: "Platform",
     href: "https://supabase.com/",
     image: "/images/brands/newImages/supabase.svg",
   },
   {
     id: 6,
     name: "React JS",
+    description: "Description",
     href: "https://es.react.dev/",
     image: "/images/brands/newImages/react.svg",
   },
   {
     id: 7,
     name: "Versel",
+    description: "Hosting",
     href: "https://vercel.com/",
     image: "/images/brands/newImages/versel.svg",
   },
   {
     id: 8,
     name: "Tailnwind CCS",
+    description: "Styling",
     href: "https://tailwindcss.com/",
     image: "/images/brands/newImages/tailwind.svg",
   },
   {
     id: 9,
     name: "Figma",
+    description: "Desing",
     href: "https://www.figma.com/",
     image: "/images/brands/newImages/figma.svg",
   },
   {
     id: 10,
     name: "Stripe",
+    description: "Payments",
     href: "https://stripe.com/es-us",
     image: "/images/brands/newImages/stripe.svg",
   },
@@ -89,7 +99,7 @@ const Brands = () => {
 export default Brands;
 
 const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { href, image, name } = brand;
+  const { href, image, name, description } = brand;
 
   return (
     <div className="mx-3 flex w-full max-w-[140px] flex-col items-center justify-center py-[15px] sm:mx-4 lg:max-w-[130px] xl:mx-6 xl:max-w-[150px] 2xl:mx-8 2xl:max-w-[160px]">
@@ -102,6 +112,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         <Image src={image} alt={name} fill />
       </a>
       <p>{name}</p>
+      <p className="text-xs" >{description}</p>
     </div>
   );
 };
