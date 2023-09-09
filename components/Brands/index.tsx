@@ -26,7 +26,7 @@ const brandsData: Brand[] = [
   {
     id: 4,
     name: "Webpay",
-    description: "payment",
+    description: "Payment",
     href: "https://www.webpay.cl",
     image: "/images/brands/newImages/webpay.svg",
   },
