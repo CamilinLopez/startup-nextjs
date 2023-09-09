@@ -40,7 +40,7 @@ const brandsData: Brand[] = [
   {
     id: 6,
     name: "React JS",
-    description: "Description",
+    description: "Library",
     href: "https://es.react.dev/",
     image: "/images/brands/newImages/react.svg",
   },
