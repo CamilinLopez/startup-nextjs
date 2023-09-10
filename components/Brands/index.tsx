@@ -72,6 +72,13 @@ const brandsData: Brand[] = [
     href: "https://stripe.com/es-us",
     image: "/images/brands/newImages/stripe.svg",
   },
+  {
+    id: 11,
+    name: "Flutter",
+    description: "Mobile",
+    href: "https://stripe.com/es-us",
+    image: "/images/brands/newImages/flutter.svg",
+  }
 ];
 
 const Brands = () => {
