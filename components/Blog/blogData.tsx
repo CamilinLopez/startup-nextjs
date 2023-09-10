@@ -17,10 +17,10 @@ const blogData: Blog[] = [
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Productivity software for meeting notes & tasks.",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/newImages/project2.png",
+      "Dedicated meeting hubs to help you get the most out of each and every meeting.",
+    image: "/images/blog/newImages/project2.svg",
     author: {
       name: "Musharof Chy",
       image: "/images/blog/author-02.png",
@@ -31,10 +31,10 @@ const blogData: Blog[] = [
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "An all-in-one platform for copywriters",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-03.jpg",
+      "A two-part project to help copywriters practice, publish, and find work.",
+    image: "/images/blog/newImages/project3.png",
     author: {
       name: "Lethium Deo",
       image: "/images/blog/author-03.png",
