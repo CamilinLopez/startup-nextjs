@@ -18,6 +18,7 @@ const Blog = () => {
         startIndex--;
       }
     }
+    
 
     if (pag.item === "Next") {
       if (startIndex !== 9 && endIndex !== 10) {
