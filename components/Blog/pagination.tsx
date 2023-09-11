@@ -1,11 +1,10 @@
-'use client'
+"use client";
 
 const Pagination = ({ blogsPerPage }) => {
-
-  const page = ["Prev", "Next"];
+  const page = ["Prev", "1", "2", "3", "...", "Next"];
 
   const handleClick = (pag) => {
-    blogsPerPage(pag)
+    blogsPerPage(pag);
   };
   return (
     <>
@@ -14,7 +13,7 @@ const Pagination = ({ blogsPerPage }) => {
           {page.map((item, key) => (
             <li className="mx-1" key={key}>
               <button
-                onClick={()=>handleClick({item})}
+                onClick={() => handleClick({ item })}
                 className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
               >
                 {item}

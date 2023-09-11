@@ -18,16 +18,17 @@ const Blog = () => {
         startIndex--;
       }
     }
-    
 
     if (pag.item === "Next") {
       if (startIndex !== 9 && endIndex !== 10) {
-        console.log("hola");
         endIndex++;
         startIndex++;
       }
     }
-    console.log(startIndex, endIndex);
+    if (pag.item !== "Next" && pag.item !== "Prev" && pag.item !== "...") {
+      endIndex = parseInt(pag.item);
+      startIndex = endIndex - 1;
+    }
     setBlogsToSwhow(blogData.slice(startIndex, endIndex));
   };
 
@@ -39,7 +40,7 @@ const Blog = () => {
           paragraph="Ideas we've brought to life"
           center
         />
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:grid-cols-2 lg:gap-x-6">
+        <div className="justify-center items-center">
           {blogsToSwhow.map((blog) => (
             <div key={blog.id} className="w-full">
               <SingleBlog blog={blog} />
