@@ -5,13 +5,17 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
 import Pagination from "./pagination";
-let startIndex = 0,
-  endIndex = 1;
+import { Blog, PaginationItem } from "@/types/blog";
+
+let startIndex: number = 0;
+let endIndex: number = 1;
 
 const Blog = () => {
-  const [blogsToSwhow, setBlogsToSwhow] = useState(blogData.slice(0, 1));
+  const [blogsToSwhow, setBlogsToSwhow] = useState<Blog[]>(
+    blogData.slice(0, 1)
+  );
 
-  const blogsPerPage = (pag) => {
+  const blogsPerPage = (pag: { item: PaginationItem }) => {
     if (pag.item === "Prev") {
       if (startIndex !== 0 && endIndex !== 1) {
         endIndex--;
@@ -34,7 +38,7 @@ const Blog = () => {
 
   return (
     <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
-      <div className="container">
+      <div className="container bg-yellow ">
         <SectionTitle
           title="Our Projects"
           paragraph="Ideas we've brought to life"
@@ -47,7 +51,6 @@ const Blog = () => {
             </div>
           ))}
         </div>
-
         <div>
           <Pagination blogsPerPage={blogsPerPage} />
         </div>

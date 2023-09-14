@@ -1,9 +1,11 @@
 "use client";
 
-const Pagination = ({ blogsPerPage }) => {
-  const page = ["Prev", "1", "2", "3", "...", "Next"];
+import { PaginationItem } from "@/types/blog";
 
-  const handleClick = (pag) => {
+const Pagination = ({ blogsPerPage }) => {
+  const page: PaginationItem[] = ["Prev", "1", "2", "3", "...", "Next"];
+
+  const handleClick = (pag: { item: PaginationItem }) => {
     blogsPerPage(pag);
   };
   return (

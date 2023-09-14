@@ -13,3 +13,6 @@ export type Blog = {
   // tags: string[];
   // publishDate: string;
 };
+
+export type PaginationItem = "Prev" | "Next" | "..." | "1" | "2" | "3";
+

@@ -1,4 +1,4 @@
-const SectionTitle = ({
+const   SectionTitle = ({
   title,
   paragraph,
   width = "570px",

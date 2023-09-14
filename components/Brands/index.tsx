@@ -53,7 +53,7 @@ const brandsData: Brand[] = [
   },
   {
     id: 8,
-    name: "Tailnwind CCS",
+    name: "Tailwind CCS",
     description: "Styling",
     href: "https://tailwindcss.com/",
     image: "/images/brands/newImages/tailwind.svg",
@@ -78,7 +78,7 @@ const brandsData: Brand[] = [
     description: "Mobile",
     href: "https://stripe.com/es-us",
     image: "/images/brands/newImages/flutter.svg",
-  }
+  },
 ];
 
 const Brands = () => {
@@ -119,7 +119,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         <Image src={image} alt={name} fill />
       </a>
       <p>{name}</p>
-      <p className="text-xs" >{description}</p>
+      <p className="text-xs">{description}</p>
     </div>
   );
 };
