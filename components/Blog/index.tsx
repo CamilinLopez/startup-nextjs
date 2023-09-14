@@ -38,7 +38,7 @@ const Blog = () => {
 
   return (
     <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
-      <div className="container bg-yellow ">
+      <div className="container">
         <SectionTitle
           title="Our Projects"
           paragraph="Ideas we've brought to life"
