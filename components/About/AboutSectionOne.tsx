@@ -16,7 +16,7 @@ const AboutSectionOne = () => {
         <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 md:gap-x-8 lg:gap-x-8">
             {blocksInfo.map((block) => (
-              <div key={block.id} className="mb-6">
+              <div key={block.id} className="mb-14">
                 <Blocks block={block} />
               </div>
             ))}
