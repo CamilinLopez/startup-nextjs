@@ -53,7 +53,7 @@ const AboutSectionOne = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center py-10">
           <h3 className="text-xl font-bold text-black dark:text-white py-6">
             Our Why
           </h3>
