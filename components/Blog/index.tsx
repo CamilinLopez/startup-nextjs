@@ -40,8 +40,8 @@ const Blog = () => {
     <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Our Projects"
-          paragraph="Ideas we've brought to life"
+          title="Nuestros Proyectos"
+          paragraph="Ideas que hemos dado vida"
           center
         />
         <div className="justify-center items-center">

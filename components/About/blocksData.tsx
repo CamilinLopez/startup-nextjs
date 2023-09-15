@@ -1,4 +1,4 @@
-import { Block, BlockInfo } from "@/types/blocks";
+import { Block, BlockInfo, ProcessInfo } from "@/types/blocks";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -22,69 +22,69 @@ const xIcon = (
 export const blocksInfo: Block[] = [
   {
     id: 1,
-    title: "Freelance/Hires",
+    title: "Freelance/Contrataciones",
     item1: {
-      text: "Custom product",
+      text: "Producto personalizado",
       log: checkIcon,
     },
     item2: {
-      text: "Expensive (£30k+)",
+      text: "Costoso (más de £30,000)",
       log: xIcon,
     },
     item3: {
-      text: "Long duration (3+ months)",
+      text: "Larga duración (más de 3 meses)",
       log: xIcon,
     },
     item4: {
-      text: "Self-managed process",
+      text: "Proceso autogestionado",
       log: xIcon,
     },
     item5: {
-      text: "Lack founder/MVP awareness",
+      text: "Falta de conocimiento sobre el fundador/MVP",
       log: xIcon,
     },
   },
   {
     id: 2,
-    title: "Agencies",
+    title: "Agencias",
     item1: {
-      text: "Custom product",
+      text: "Producto personalizado",
       log: checkIcon,
     },
     item2: {
-      text: "Expensive (£40k+)",
+      text: "Costoso (más de £40,000)",
       log: xIcon,
     },
     item3: {
-      text: "Long duration (3+ months)",
+      text: "Larga duración (más de 3 meses)",
       log: xIcon,
     },
     item4: {
-      text: "Intense process",
+      text: "Proceso intenso",
       log: xIcon,
     },
     item5: {
-      text: "Lack MVP awareness",
+      text: "Falta de conciencia sobre el MVP",
       log: xIcon,
     },
   },
   {
     id: 3,
-    title: "No-Code",
+    title: "Sin programación",
     item1: {
-      text: "Limited product",
+      text: "Producto limitado",
       log: xIcon,
     },
     item2: {
-      text: "Low cost",
+      text: "Bajo costo",
       log: checkIcon,
     },
     item3: {
-      text: "Long duration (3+ months)",
+      text: "Larga duración (más de 3 meses)",
       log: xIcon,
     },
     item4: {
-      text: "Difficult process",
+      text: "Proceso difícil",
       log: xIcon,
     },
     item5: {
@@ -94,21 +94,21 @@ export const blocksInfo: Block[] = [
   },
   {
     id: 4,
-    title: "Technical Co-Founder",
+    title: "Cofundador técnico",
     item1: {
-      text: "Custom product",
+      text: "Producto personalizado",
       log: checkIcon,
     },
     item2: {
-      text: "High cost (50% ownership)",
+      text: "Alto costo (50% de propiedad)",
       log: xIcon,
     },
     item3: {
-      text: "Long duration (4+ months)",
+      text: "Larga duración (4+ meses)",
       log: xIcon,
     },
     item4: {
-      text: "Intense process",
+      text: "Proceso intenso",
       log: xIcon,
     },
     item5: {
@@ -120,15 +120,15 @@ export const blocksInfo: Block[] = [
 
 export const blocksInfo1 = [
   {
-    text: "Custom product",
+    text: "Producto personalizado",
     log: checkIcon,
   },
   {
-    text: "Great value (£7.5k)",
+    text: "Gran valor (£ 7,5 mil)",
     log: checkIcon,
   },
   {
-    text: "Short duration (4-6 weeks)",
+    text: "Corta duración (4-6 semanas)",
     log: checkIcon,
   },
   {
@@ -136,7 +136,7 @@ export const blocksInfo1 = [
     log: checkIcon,
   },
   {
-    text: "Founder & MVP awareness",
+    text: "Conocimiento del fundador y MVP",
     log: checkIcon,
   },
 ];
@@ -144,14 +144,32 @@ export const blocksInfo1 = [
 export const blocksInfo2: BlockInfo[] = [
   {
     id: 1,
-    title: "MVPs you actually need",
+    title: "MVP que realmente necesitas",
     log: "images/about/logo2.svg",
-    text: "No more over-engineered products. We build fantastic, functional, and effective products that founders use to iterate to product-market fit, reducing your capital and time risk.",
+    text: "No más productos sobrediseñados. Creamos productos fantásticos, funcionales y efectivos que los fundadores utilizan para adaptar el producto al mercado, reduciendo su riesgo de capital y tiempo.",
   },
   {
     id: 2,
-    title: "Only pay for what's needed",
+    title: "Paga solo por lo necesario",
     log: "images/about/logo3.svg",
-    text: "Avoid paying for unnecessary scope and agency members, or wasting time managing freelancers. Only pay for what’s needed, a dedicated duo of designer & developer.",
+    text: "Evite pagar por miembros de agencia y alcance innecesarios, o perder el tiempo administrando trabajadores independientes. Pague solo por lo que se necesita, un dúo dedicado de diseñador y desarrollador.",
+  },
+];
+
+export const processInfo: ProcessInfo[] = [
+  {
+    id: 1,
+    title: "Responder en",
+    weeks: "24 horas",
+  },
+  {
+    id: 2,
+    title: "Confirmar en",
+    weeks: "5 dias",
+  },
+  {
+    id: 3,
+    title: "Completa en",
+    weeks: "4-6 semanas",
   },
 ];

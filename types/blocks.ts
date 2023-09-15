@@ -23,3 +23,9 @@ export type BlockInfo = {
   log: string;
   text: string;
 };
+
+export type ProcessInfo = {
+  id: number;
+  title: string;
+  weeks: string;
+}

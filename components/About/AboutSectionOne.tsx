@@ -9,8 +9,8 @@ const AboutSectionOne = () => {
     <section id="about" className="lg:pt-28 bg-primary/[.03] ">
       <div className="container">
         <SectionTitle
-          title="Why us"
-          paragraph="Save time, capital, & attention."
+          title="Por qué nosotros"
+          paragraph="Ahorra tiempo, capital y atención."
           center
         />
 
@@ -55,7 +55,7 @@ const AboutSectionOne = () => {
         </div>
         <div className="flex flex-col justify-center items-center py-10">
           <h3 className="text-xl font-bold text-black dark:text-white py-6">
-            Our Why
+          Nuestra Razón
           </h3>
           <div className="flex flex-col md:flex-row w-full justify-around">
             {blocksInfo2.map((block) => (
@@ -64,38 +64,6 @@ const AboutSectionOne = () => {
           </div>
         </div>
       </div>
-      {/* <div className="w-full h-auto flex gap-14 justify-center">
-        <div className="grid grid-cols-2 gap-10 w-1/2">
-          {blocksInfo.map((block) => (
-            <Blocks key={block.id} block={block} />
-          ))}
-        </div>
-        <div className="w-1/4 rounded-3xl bg-primary bg-opacity-25 px-0">
-          <div className="flex justify-between items-center py-3 px-6">
-            <h3 className="text-xl font-bold text-black">Simple Suite</h3>
-            <Image
-              src="images/about/logo.svg"
-              alt="logo"
-              width={35}
-              height={35}
-            />
-          </div>
-          <div className="py-6 px-6">
-            {blocksInfo1.map((item, id) => (
-              <List key={id} item={item} />
-            ))}
-          </div>
-          <div className="w-ful" >
-            <Image
-              className="rounded-3xl"
-              src="images/about/logo1.svg"
-              alt="logo1"
-              width={700}
-              height={900}
-            />
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };
