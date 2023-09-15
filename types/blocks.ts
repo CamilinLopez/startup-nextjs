@@ -1,3 +1,5 @@
+import { type } from "os";
+
 type SVGImage = React.SVGProps<SVGSVGElement>;
 
 export type Item = {
@@ -13,4 +15,11 @@ export type Block = {
   item3: Item;
   item4: Item;
   item5: Item;
+};
+
+export type BlockInfo = {
+  id: number;
+  title: string;
+  log: string;
+  text: string;
 };

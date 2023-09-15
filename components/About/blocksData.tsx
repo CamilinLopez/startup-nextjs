@@ -1,4 +1,4 @@
-import { Block } from "@/types/blocks";
+import { Block, BlockInfo } from "@/types/blocks";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -138,5 +138,20 @@ export const blocksInfo1 = [
   {
     text: "Founder & MVP awareness",
     log: checkIcon,
+  },
+];
+
+export const blocksInfo2: BlockInfo[] = [
+  {
+    id: 1,
+    title: "MVPs you actually need",
+    log: "images/about/logo2.svg",
+    text: "No more over-engineered products. We build fantastic, functional, and effective products that founders use to iterate to product-market fit, reducing your capital and time risk.",
+  },
+  {
+    id: 2,
+    title: "Only pay for what's needed",
+    log: "images/about/logo3.svg",
+    text: "Avoid paying for unnecessary scope and agency members, or wasting time managing freelancers. Only pay for what’s needed, a dedicated duo of designer & developer.",
   },
 ];
