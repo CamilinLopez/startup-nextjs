@@ -10,7 +10,11 @@ const PricingBox = (props: {
   return (
     <div className="w-full">
       <div
-        className="wow fadeInUp relative z-10 rounded-md bg-white px-8 py-10 shadow-signUp dark:bg-[#1D2144]"
+        className={`relative z-10 rounded-md ${
+          packageName === "MVP"
+            ? "bg-dark bg-opacity-10 dark:bg-body-color dark:bg-opacity-40"
+            : "bg-white"
+        } px-8 py-10 shadow-signUp dark:bg-[#1D2144]`}
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-between">
@@ -24,8 +28,14 @@ const PricingBox = (props: {
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            Start Free Trial
+          <button
+            className={`${
+              packageName !== "MVP"
+                ? "bg-opacity-50 dark:bg-opacity-20"
+                : "bg-primary"
+            } flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp`}
+          >
+            Comenzar
           </button>
         </div>
         <div>{children}</div>

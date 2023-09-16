@@ -1,37 +1,6 @@
-import { Data, Testimonial } from "@/types/testimonial";
+import { Data } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
-import Image from "next/image";
-import SingleTestimonial from "./SingleTestimonial";
 
-const testimonialData: Testimonial[] = [
-  {
-    id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-  {
-    id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
-  },
-];
 
 const data: Data[] = [
   {
@@ -91,7 +60,7 @@ const data: Data[] = [
 const Blocks = ({ info }: { info: Data }) => {
   const { icon, text, title } = info;
   return (
-    <div className="wow fadeInUp rounded-md flex flex-col items-start md:items-center justify-center w-96 h-60 bg-white shadow-one dark:bg-[#1D2144] space-y-4 ">
+    <div className="wow fadeInUp rounded-md flex flex-col items-start md:items-center justify-center w-96 h-60 bg-white shadow-signUp dark:bg-[#1D2144] space-y-4 ">
       <div>{icon}</div>
       <h3 className="text-xl font-bold text-black dark:text-white">{title}</h3>
       <p className="text-start md:text-center py-4 text-base font-medium text-body-color">{text}</p>

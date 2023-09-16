@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Planes"
+          paragraph="Da vida a tu idea"
           center
           width="665px"
         />
@@ -60,46 +60,38 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col gap-x-32 gap-y-10 md:flex-row">
           <PricingBox
-            packageName="Lite"
+            packageName="Prototipo"
             price={isMonthly ? "40" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Branding y página de destino para ayudarle a atraer usuarios potenciales, validar la demanda y probar sus suposiciones más riesgosas."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Denominación y Dominio" status="active" />
+            <OfferList text="Logo" status="active" />
+            <OfferList text="Paleta de colores y tipografía" status="active" />
+            <OfferList text="Landing Page" status="active" />
+            <OfferList text="Redacción" status="active" />
+            <OfferList text="Maquetas de software" status="active" />
+            <OfferList text="Colección de correo electrónico" status="active" />
+            <OfferList text="Análisis de sitios web" status="active" />
+
           </PricingBox>
           <PricingBox
-            packageName="Basic"
+            packageName="MVP"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Una aplicación web MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Todo en Prototipo" status="active" />
+            <OfferList text="Sitio web (2-3 páginas)" status="active" />
+            <OfferList text="Aplicación web (5-20 pantallas)" status="active" />
+            <OfferList text="Autenticacion de usuario" status="active" />
+            <OfferList text="Integración de pagos" status="active" />
+            <OfferList text="Integraciones API" status="active" />
+            <OfferList text="Estrategia de marketing personalizada" status="active" />
           </PricingBox>
-          <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
-          </PricingBox>
+          
         </div>
       </div>
 
