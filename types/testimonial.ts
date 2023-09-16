@@ -6,3 +6,10 @@ export type Testimonial = {
   image: string;
   star: number;
 };
+
+export type Data = {
+  id: number;
+  icon: JSX.Element;
+  title: string;
+  text: string;
+}

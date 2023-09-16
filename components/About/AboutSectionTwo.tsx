@@ -35,7 +35,7 @@ const Process = ({ processInfo }: { processInfo: ProcessInfo }) => {
 const Steps = ({ step }: { step: { count: number; text: string } }) => {
   const { count, text } = step;
   return (
-    <div className="flex items-center m-10 gap-x-5" >
+    <div className="flex flex-col md:flex-row items-center m-10 gap-x-5" >
       <h3 className="text-xl font-bold text-black dark:text-white" >{count}</h3>
       <p className="text-base font-medium text-body-color" >{text}</p>
     </div>

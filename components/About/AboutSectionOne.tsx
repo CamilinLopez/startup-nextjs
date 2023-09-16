@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
 
           <div className="w-full md:w-1/3 rounded-3xl bg-primary bg-opacity-25 px-0">
             <div className="flex justify-between items-center py-3 px-6">
-              <h3 className="text-xl font-bold text-black dark:textw">
+              <h3 className="text-xl font-bold text-black dark:text-white">
                 Simple Suite
               </h3>
               <Image
