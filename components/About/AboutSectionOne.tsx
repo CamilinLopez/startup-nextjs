@@ -14,19 +14,16 @@ const AboutSectionOne = () => {
           center
         />
 
-        <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 md:gap-x-8 lg:gap-x-12">
+        <div className="flex flex-col md:flex-row gap-8  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blocksInfo.map((block) => (
-              <div key={block.id} className="mb-10 md:mb-14">
-                <Blocks block={block} />
-              </div>
+              <Blocks key={block.id} block={block} />
             ))}
           </div>
-
-          <div className="w-full md:w-1/3 rounded-3xl bg-primary bg-opacity-25 px-0">
-            <div className="flex justify-between items-center py-3 px-6">
+          <div className="rounded-3xl bg-primary bg-opacity-25 p-5">
+            <div className="flex justify-between items-center">
               <h3 className="text-xl font-bold text-black dark:text-white">
-                Simple Suite
+                Simple Suit
               </h3>
               <Image
                 src="images/about/logo.svg"
@@ -35,27 +32,17 @@ const AboutSectionOne = () => {
                 height={35}
               />
             </div>
-            <div className="py-6 px-6">
+            <div className="my-9" >
               {blocksInfo1.map((item, id) => (
                 <List key={id} item={item} />
               ))}
             </div>
-            <div
-              className="hidden md:block w-full relative"
-              style={{ paddingBottom: "75%" }}
-            >
-              <Image
-                className="rounded-3xl object-cover object-center absolute top-0 left-0 w-full h-full"
-                src="images/about/logo1.svg"
-                alt="logo1"
-                fill
-              />
-            </div>
           </div>
         </div>
+
         <div className="flex flex-col justify-center items-center py-10">
           <h3 className="text-xl font-bold text-black dark:text-white py-6">
-          Nuestra Razón
+            Nuestra Razón
           </h3>
           <div className="flex flex-col md:flex-row w-full justify-around">
             {blocksInfo2.map((block) => (
