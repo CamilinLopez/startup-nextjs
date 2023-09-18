@@ -16,7 +16,7 @@ export const List = ({ item }) => {
 function Blocks({ block }: { block: Block }) {
   const { title, item1, item2, item3, item4, item5 } = block;
   return (
-    <div className=" rounded-3xl h-64">
+    <div className=" rounded-3xl h-auto p-5 shadow-signUp bg-white dark:bg-[#1D2144]">
       <div>
         <h3 className="text-xl font-bold text-black dark:text-white " >{title}</h3>
       </div>
