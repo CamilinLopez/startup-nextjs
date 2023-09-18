@@ -17,7 +17,7 @@ const Pricing = () => {
           width="665px"
         />
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div
             className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16"
             data-wow-delay=".1s"
@@ -58,7 +58,7 @@ const Pricing = () => {
               Yearly
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-x-32 gap-y-10 md:flex-row">
           <PricingBox
