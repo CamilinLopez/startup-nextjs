@@ -18,7 +18,7 @@ function Blocks({ block }: { block: Block }) {
   return (
     <div className=" rounded-3xl h-auto p-5 shadow-signUp bg-white dark:bg-[#1D2144]">
       <div>
-        <h3 className="text-xl font-bold text-black dark:text-white " >{title}</h3>
+      <h3 className="text-xl font-bold text-black dark:text-white truncate">{title}</h3>
       </div>
       <div className="py-9 space-y-2">
         <List item={item1} />
