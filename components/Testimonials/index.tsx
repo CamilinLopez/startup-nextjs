@@ -60,7 +60,7 @@ const data: Data[] = [
 const Blocks = ({ info }: { info: Data }) => {
   const { icon, text, title } = info;
   return (
-    <div className="wow fadeInUp rounded-md flex flex-col items-start md:items-center p-5 justify-center w-96 h-60 bg-white shadow-signUp dark:bg-[#1D2144] space-y-4 ">
+    <div className="wow fadeInUp rounded-xl flex flex-col items-start md:items-center p-5 justify-center w-96 h-60 bg-white shadow-signUp dark:bg-[#1D2144] space-y-4 ">
       <div>{icon}</div>
       <h3 className="text-xl font-bold text-black dark:text-white">{title}</h3>
       <p className="text-start md:text-center py-4 text-base font-medium text-body-color">{text}</p>
