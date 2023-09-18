@@ -3,18 +3,20 @@ import { Feature } from "@/types/feature";
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, week, title, paragraph } = feature;
   return (
-    <div className="w-full">
+    <div className="w-full rounded-xl shadow-signUp bg-white dark:bg-[#1D2144]">
       <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="my-6">{icon}</div>
-        <div className="mb-10 flex h-[30px] w-[100px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-          {week}
+        <div className="flex flex-col gap-y-8 p-5" >
+          <div className="flex justify-between items-center ">
+            <div className="flex flex-col gap-y-2">
+              <p className="text-base font-medium text-body-color">{week}</p>
+              <h3 className="text-xl font-bold text-black dark:text-white">
+                {title}
+              </h3>
+            </div>
+            {icon}
+          </div>
+          <p className="text-start text-base font-medium text-body-color" >{paragraph}</p>
         </div>
-        <h3 className="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-          {title}
-        </h3>
-        <p className="pr-[50px] text-base font-medium leading-relaxed text-body-color">
-          {paragraph}
-        </p>
       </div>
     </div>
   );
