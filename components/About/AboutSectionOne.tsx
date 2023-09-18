@@ -14,7 +14,7 @@ const AboutSectionOne = () => {
           center
         />
 
-        <div className="flex flex-col md:flex-row gap-8  ">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blocksInfo.map((block) => (
               <Blocks key={block.id} block={block} />
@@ -32,7 +32,7 @@ const AboutSectionOne = () => {
                 height={35}
               />
             </div>
-            <div className="my-9" >
+            <div className="my-9">
               {blocksInfo1.map((item, id) => (
                 <List key={id} item={item} />
               ))}
