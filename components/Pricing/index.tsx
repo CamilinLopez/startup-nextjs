@@ -75,7 +75,6 @@ const Pricing = () => {
             <OfferList text="Maquetas de software" status="active" />
             <OfferList text="Colección de correo electrónico" status="active" />
             <OfferList text="Análisis de sitios web" status="active" />
-
           </PricingBox>
           <PricingBox
             packageName="MVP"
@@ -84,14 +83,16 @@ const Pricing = () => {
             subtitle="Una aplicación web MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
             <OfferList text="Todo en Prototipo" status="active" />
-            <OfferList text="Sitio web (2-3 páginas)" status="active" />
+            <OfferList text=" App Móvil en Flutter Híbrida (iOS & Android)" status="active" />
             <OfferList text="Aplicación web (5-20 pantallas)" status="active" />
             <OfferList text="Autenticacion de usuario" status="active" />
             <OfferList text="Integración de pagos" status="active" />
             <OfferList text="Integraciones API" status="active" />
-            <OfferList text="Estrategia de marketing personalizada" status="active" />
+            <OfferList
+              text="Estrategia de marketing personalizada"
+              status="active"
+            />
           </PricingBox>
-          
         </div>
       </div>
 
