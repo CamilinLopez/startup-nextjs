@@ -37,7 +37,7 @@ const Blog = () => {
   };
 
   return (
-    <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
+    <section id="blog" className="bg-primary/5 py-20 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Nuestros Proyectos"
