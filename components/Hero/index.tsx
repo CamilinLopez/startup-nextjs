@@ -27,7 +27,7 @@ const Hero = () => {
                     href="/contact"
                     className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    más información
+                    Más información
                   </Link>
                   <Link
                     href="/blog-sidebar"
