@@ -60,7 +60,7 @@ const Pricing = () => {
           </div>
         </div> */}
 
-        <div className="flex flex-col gap-x-32 gap-y-10 md:flex-row">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Prototipo"
             price={isMonthly ? "40" : "120"}
@@ -83,7 +83,24 @@ const Pricing = () => {
             subtitle="Una aplicación web MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
             <OfferList text="Todo en Prototipo" status="active" />
-            <OfferList text=" App Móvil en Flutter Híbrida (iOS & Android)" status="active" />
+            <OfferList text="Sitio web (2-3) paginas" status="active" />
+            <OfferList text="Aplicación web (5-20 pantallas)" status="active" />
+            <OfferList text="Autenticacion de usuario" status="active" />
+            <OfferList text="Integración de pagos" status="active" />
+            <OfferList text="Integraciones API" status="active" />
+            <OfferList
+              text="Estrategia de marketing personalizada"
+              status="active"
+            />
+          </PricingBox>
+          <PricingBox
+            packageName="MVP"
+            price={isMonthly ? "589" : "999"}
+            duration={isMonthly ? "mo" : "yr"}
+            subtitle="App Móvil Híbrida en Flutter (iOS & Android), MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
+          >
+            <OfferList text="Todo en Prototipo" status="active" />
+            <OfferList text="Sitio web (2-3) paginas" status="active" />
             <OfferList text="Aplicación web (5-20 pantallas)" status="active" />
             <OfferList text="Autenticacion de usuario" status="active" />
             <OfferList text="Integración de pagos" status="active" />
