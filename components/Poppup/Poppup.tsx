@@ -17,7 +17,7 @@ export default function Poppup() {
               trigger: "scroll",
               scrollPercent: 5
             },
-            showOnce: false,
+            showOnce: true,
             doNotShowAfterSubmit: true
           }
         };
