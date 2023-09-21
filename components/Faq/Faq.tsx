@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import Image from "next/image";
 
 type Question = {
   id: number;
@@ -43,12 +44,22 @@ const QuestionTitle = ({ question }: { question: Question }) => {
     <div className="flex flex-col w-full md:w-[700px] p-10 shadow-signUp rounded-xl dark:bg-[#1D2144]">
       <div
         onClick={toggleExpanded}
-        className="cursor-pointer flex justify-between"
+        className="cursor-pointer flex justify-between items-center"
       >
         <h3 className="text-xl font-bold text-black dark:text-white">
           {title}
         </h3>
-        <svg
+
+        <Image
+          className={`w-5 h-5 transition-transform transform ${
+            isExpanded ? "rotate-180" : "rotate-0"
+          }`}
+          src="/images/faq/ArrowDonw.svg"
+          alt="arrow"
+          width={20}
+          height={20}
+        />
+        {/* <svg
           className={`w-5 h-5 transition-transform transform ${
             isExpanded ? "rotate-180" : "rotate-0"
           }`}
@@ -63,7 +74,7 @@ const QuestionTitle = ({ question }: { question: Question }) => {
             strokeWidth="2"
             d="M19 9l-7 7-7-7"
           />
-        </svg>
+        </svg> */}
       </div>
       {isExpanded && (
         <div
@@ -84,7 +95,11 @@ function Faq() {
   return (
     <section className="bg-primary/[.03] py-16 md:py-20 lg:py-28">
       <div className="container">
-        <SectionTitle title="" paragraph="Preguntas frecuentes" center />
+        <SectionTitle
+          title="Responde tus dudas"
+          paragraph="Preguntas frecuentes"
+          center
+        />
         <div className="w-full flex flex-col justify-center items-center gap-y-7">
           {questions.map((question) => (
             <QuestionTitle key={question.id} question={question} />
@@ -95,7 +110,10 @@ function Faq() {
           <h3 className="text-xl font-bold text-black dark:text-white text-center">
             ¿Tengo una pregunta? Envíanos un correo electrónico
           </h3>
-          <a className="cursor-pointer text-start text-base font-medium text-body-color" href="https://vercel.com/camilinlopez/startup-nextjs" >
+          <a
+            className="cursor-pointer text-start text-base font-medium text-body-color"
+            href="https://vercel.com/camilinlopez/startup-nextjs"
+          >
             {"hello@simplesuite.co ->"}
           </a>
         </div>
