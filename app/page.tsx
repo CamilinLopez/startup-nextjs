@@ -13,6 +13,7 @@ import Poppup from "@/components/Poppup/Poppup";
 import Video from "@/components/Video";
 import Faq from "@/components/Faq/Faq";
 import { Inter } from "@next/font/google";
+import Finish from "@/components/Finish/Finish";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function Home() {
       <Pricing />
       <Calendario />
       <Faq />
+      <Finish />
       {/* <Contact /> */}
     </>
   );

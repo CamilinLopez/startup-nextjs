@@ -9,20 +9,20 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "About",
-    path: "/about",
+    title: "Proceso",
+    path: "/proceso",
     newTab: false,
   },
   {
     id: 33,
-    title: "Blog",
-    path: "/blog",
+    title: "Stack ",
+    path: "/brands",
     newTab: false,
   },
   {
     id: 3,
-    title: "Support",
-    path: "/contact",
+    title: "Portafolio",
+    path: "/",
     newTab: false,
   },
   {
@@ -32,31 +32,31 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 41,
-        title: "About Page",
+        title: "Porque nosotros",
         path: "/about",
         newTab: false,
       },
       {
         id: 42,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 43,
-        title: "Blog Grid Page",
+        title: "Cómo funciona",
         path: "/blog",
         newTab: false,
       },
       {
+        id: 43,
+        title: "Planes",
+        path: "/blog-details",
+        newTab: false,
+      },
+      {
         id: 44,
-        title: "LLamanos",
+        title: "Agendar",
         path: "/blog-sidebar",
         newTab: false,
       },
       {
         id: 45,
-        title: "Blog Details Page",
+        title: "Blog",
         path: "/blog-details",
         newTab: false,
       },
@@ -68,7 +68,7 @@ const menuData: Menu[] = [
       },
       {
         id: 47,
-        title: "Sign Up Page",
+        title: "Sing Up Page",
         path: "/signup",
         newTab: false,
       },
