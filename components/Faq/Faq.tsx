@@ -31,6 +31,11 @@ const questions: Question[] = [
     title: "¿Cómo funciona el pago?",
     text: "Like most of the SaaS products we build, we use Stripe to manage payments, and in alignment with industry best practice we charge 25% as an upfront deposit, and then the remaining 75% on completion.",
   },
+  {
+    id:5,
+    title:"¿Cómo puede mantener la calidad del trabajo?",
+    text: "Nos centramos en un proyecto a la vez, lo que significa que usted y su idea reciben toda nuestra atención, ya que creemos que esto genera los mejores resultados."
+  }
 ];
 
 const QuestionTitle = ({ question }: { question: Question }) => {

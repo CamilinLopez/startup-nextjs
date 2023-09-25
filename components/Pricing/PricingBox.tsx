@@ -30,7 +30,7 @@ const PricingBox = (props: {
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <Link href="blog-sidebar">
+          <Link href="https://tally.so/embed/wA2MAo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1">
             <button
               className={`${
                 packageName !== "MVP"

@@ -54,19 +54,18 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo/newlogo/PROTOLYr 7.jpg"
                   alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
+                  width={100}
+                  height={10}
                 />
-                <Image
+                {/* <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="hidden w-full dark:block"
-                />
+                /> */}
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
