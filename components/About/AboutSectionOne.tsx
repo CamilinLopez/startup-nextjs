@@ -30,6 +30,7 @@ const AboutSectionOne = () => {
                 alt="logo"
                 width={35}
                 height={35}
+                
                 className="rounded-xl opacity-80"
               />
             </div>
