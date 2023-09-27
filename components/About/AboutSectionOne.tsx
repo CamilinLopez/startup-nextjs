@@ -26,7 +26,7 @@ const AboutSectionOne = () => {
               Protoly Lab
               </h3>
               <Image
-                src="/images/logo/newlogo/PROTOLYr 1.jpg"
+                src="/images/logo/newlogo/PROTOLYr 4.jpg"
                 alt="logo"
                 width={35}
                 height={35}
