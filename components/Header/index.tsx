@@ -68,7 +68,7 @@ const Header = () => {
                   className="hidden w-full dark:block"
                 /> */}
                 <Image
-                  src="/images/logo/newlogo/PROTOLYR 2.jpg"
+                  src="/images/logo/newlogo/PROTOLYr 2.jpg"
                   className="opacity-50
                    rounded-xl"
                   alt="logo"
