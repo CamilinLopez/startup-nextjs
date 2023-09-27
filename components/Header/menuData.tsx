@@ -22,7 +22,7 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "Portafolio",
-    path: "/",
+    path: "https://kulko.app/laburgerdepapel",
     newTab: false,
   },
   {
@@ -60,24 +60,24 @@ const menuData: Menu[] = [
         path: "/brands",
         newTab: false,
       },
-      {
-        id: 46,
-        title: "Sign In Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Sing Up Page",
-        path: "/signup",
-        newTab: false,
-      },
-      {
-        id: 48,
-        title: "Error Page",
-        path: "/error",
-        newTab: false,
-      },
+      // {
+      //   id: 46,
+      //   title: "Sign In Page",
+      //   path: "/signin",
+      //   newTab: false,
+      // },
+      // {
+      //   id: 47,
+      //   title: "Sing Up Page",
+      //   path: "/signup",
+      //   newTab: false,
+      // },
+      // {
+      //   id: 48,
+      //   title: "Error Page",
+      //   path: "/error",
+      //   newTab: false,
+      // },
     ],
   },
 ];

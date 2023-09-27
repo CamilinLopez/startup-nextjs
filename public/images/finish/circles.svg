@@ -1,5 +1,23 @@
-<svg width="631" height="176" viewBox="0 0 631 176" className="fill-current" xmlns="http://www.w3.org/2000/svg">
-<path d="M105 174.995C207.097 37.6679 426.265 37.6672 527 175" />
-<path d="M1 174.991C153.177 -56.998 479.852 -56.999 630 175" />
-<path d="M220 174.998C266.452 127 366.168 127 412 175"  />
-</svg>
+            <svg
+              width="631"
+              height="176"
+              viewBox="0 0 631 176"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+            >
+              <path
+                d="M105 174.995C207.097 37.6679 426.265 37.6672 527 175"
+                stroke="#959CB1" 
+                strokeWidth="2" 
+              />
+              <path
+                d="M1 174.991C153.177 -56.998 479.852 -56.999 630 175"
+                stroke="#959CB1" 
+                strokeWidth="2" 
+              />
+              <path
+                d="M220 174.998C266.452 127 366.168 127 412 175"
+                stroke="#959CB1" 
+                strokeWidth="2" 
+              />
+            </svg>

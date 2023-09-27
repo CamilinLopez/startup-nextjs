@@ -82,7 +82,7 @@ const QuestionTitle = ({ question }: { question: Question }) => {
 
 function Faq() {
   return (
-    <section className="bg-primary/[.03] py-16 md:py-20 lg:py-28">
+    <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Responde tus dudas"
