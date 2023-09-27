@@ -63,7 +63,7 @@ const featuresData: Feature[] = [
     week: "Semana 5-6",
     title: "Desarrollo",
     paragraph:
-      "Codificamos desde cero para que aprendas de cada interacción de usuario y realices iteraciones hasta encontrar el ajuste con el mercado.",
+      "Codificamos desde cero, priorizamos los features para que aprendas cada interacción de usuario. Reunimos un equipo de 2 personas para desarrollar y entregar su producto.",
   },
   // {
   //   id: 1,

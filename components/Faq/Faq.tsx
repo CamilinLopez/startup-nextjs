@@ -13,8 +13,8 @@ type Question = {
 const questions: Question[] = [
   {
     id: 1,
-    title: "¿Cómo funciona su proceso?",
-    text: "You can start the process by sending us a message or booking an intro call to help us determine if we’re able to support you based on the complexity of your idea. We’ll then create a strategy for bringing your idea to life and present this to you in video format, based on your initial insights. If we're able to support and you're happy with the approach then we can officially kick-start the project by securing an initial deposit (25%). Once a deposit has been made we'll book a discovery call to learn all the little details about your idea and preferences. We’ll then kick start the research process, followed by branding, design, and build, with regular async updates and optional check-in calls to ensure you’re happy with the result. On completion, we’ll send over the final payment link (75%) and transfer all assets to you.",
+    title: "¿Cómo funciona el proceso?",
+    text: "Puede comenzar el proceso enviándonos un mensaje o programando una llamada de presentación para ayudarnos a determinar si podemos ayudarlo en función de la complejidad de su idea. Luego, crearemos una estrategia para hacer realidad su idea y se la presentaremos en formato de video, según sus conocimientos iniciales. Si podemos apoyarlo y usted está satisfecho con el enfoque, entonces podemos iniciar oficialmente el proyecto garantizando un depósito inicial (25%). Una vez realizado el depósito, programaremos una llamada de descubrimiento para conocer todos los pequeños detalles sobre su idea y preferencias. Luego, iniciaremos el proceso de investigación, seguido de la marca, el diseño y la creación, con actualizaciones asíncronas periódicas y llamadas de control opcionales para asegurarnos de que esté satisfecho con el resultado. Al finalizar, le enviaremos el enlace de pago final (75%) y le transferiremos todos los activos.",
   },
   {
     id: 2,

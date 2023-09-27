@@ -6,19 +6,19 @@ import { ProcessInfo } from "@/types/blocks";
 const steps: { count: number; text: string }[] = [
   {
     count: 1,
-    text: "Llamada de descubrimiento inicial para conocer su idea y determinar si podemos ayudarlo.",
+    text: "Llamada de descubrimiento inicial para conocer su idea y determinar si podemos ayudarlo o no.",
   },
   {
     count: 2,
-    text: "Comience el proyecto con una inmersión profunda para asegurarse de que tenemos todo lo que necesitamos.",
+    text: "Comenzamos el proyecto con una inmersión profunda para asegurarnos de que tenemos todo lo que necesitamos.",
   },
   {
     count: 3,
-    text: "Dos llamadas de comentarios para mostrar el progreso de nuestra marca, diseño y construcción.",
+    text: "Dos llamadas de comentarios para mostrar el progreso de nuestra marca, diseño y construcción del producto.",
   },
   {
     count: 4,
-    text: "Actualizaciones asíncronas periódicas para asegurarse de que esté satisfecho con el resultado final.",
+    text: "Actualizaciones asíncronas periódicas para asegurarse de que esté satisfecho con el resultado final (1 semanal).",
   },
 ];
 
@@ -37,7 +37,7 @@ const Steps = ({ step }: { step: { count: number; text: string } }) => {
   return (
     <div className="flex flex-col md:flex-row items-center m-10 gap-x-5" >
       <h3 className="text-xl font-bold text-black dark:text-white" >{count}</h3>
-      <p className="text-base font-medium text-body-color" >{text}</p>
+      <p className="text-lg font-semibold text-body-color" >{text}</p>
     </div>
   );
 };

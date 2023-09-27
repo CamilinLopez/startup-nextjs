@@ -63,28 +63,37 @@ const Pricing = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Prototipo"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Branding y página de destino para ayudarle a atraer usuarios potenciales, validar la demanda y probar sus suposiciones más riesgosas."
+            price={isMonthly ? "1590" : "120"}
+            duration={isMonthly ? "USD" : "yr"}
+            subtitle="Branding, mockups y página de destino para ayudarle a atraer usuarios potenciales, validar la demanda y probar sus suposiciones más riesgosas."
           >
-            <OfferList text="Denominación y Dominio" status="active" />
-            <OfferList text="Logo" status="active" />
+            <OfferList text="Naming y Dominio.cl o .com" status="active" />
+            <OfferList text="Logotipo" status="active" />
             <OfferList text="Paleta de colores y tipografía" status="active" />
             <OfferList text="Landing Page" status="active" />
             <OfferList text="Redacción" status="active" />
-            <OfferList text="Maquetas de software" status="active" />
+            <OfferList
+              text="Maquetas de software (Máx 5 pantallas)"
+              status="active"
+            />
             <OfferList text="Colección de correo electrónico" status="active" />
             <OfferList text="Análisis de sitios web" status="active" />
           </PricingBox>
           <PricingBox
             packageName="MVP"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={isMonthly ? "5490" : "789"}
+            duration={isMonthly ? "USD" : "yr"}
             subtitle="Una aplicación web MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
-            <OfferList text="Todo en Prototipo" status="active" />
-            <OfferList text="Sitio web (2-3) paginas" status="active" />
-            <OfferList text="Aplicación web (5-20 pantallas)" status="active" />
+            <OfferList text="Todo lo de Prototipo" status="active" />
+            <OfferList
+              text="Sitio web (1) página o en One Page"
+              status="active"
+            />
+            <OfferList
+              text="Aplicación Web (3 Funcionalidades)"
+              status="active"
+            />
             <OfferList text="Autenticacion de usuario" status="active" />
             <OfferList text="Integración de pagos" status="active" />
             <OfferList text="Integraciones API" status="active" />
@@ -92,21 +101,35 @@ const Pricing = () => {
               text="Estrategia de marketing personalizada"
               status="active"
             />
+            <OfferList
+              text="Servidores & micro servicios costos por separados"
+              status="active"
+            />
           </PricingBox>
           <PricingBox
             packageName="MVP"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={isMonthly ? "6590" : "999"}
+            duration={isMonthly ? "USD" : "yr"}
             subtitle="App Móvil Híbrida en Flutter (iOS & Android), MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
-            <OfferList text="Todo en Prototipo" status="active" />
-            <OfferList text="Sitio web (2-3) paginas" status="active" />
-            <OfferList text="Aplicación web (5-20 pantallas)" status="active" />
+            <OfferList text="Todo lo de Prototipo" status="active" />
+            <OfferList
+              text="Sitio web (1) páginas o en One Page"
+              status="active"
+            />
+            <OfferList
+              text="Aplicación Móvil (2 Funcionalidades)"
+              status="active"
+            />
             <OfferList text="Autenticacion de usuario" status="active" />
             <OfferList text="Integración de pagos" status="active" />
             <OfferList text="Integraciones API" status="active" />
             <OfferList
               text="Estrategia de marketing personalizada"
+              status="active"
+            />
+            <OfferList
+              text="Membresías (iOS & Android) & Micro servicios costos por separados"
               status="active"
             />
           </PricingBox>

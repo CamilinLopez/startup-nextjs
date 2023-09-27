@@ -28,7 +28,7 @@ export const blocksInfo: Block[] = [
       log: checkIcon,
     },
     item2: {
-      text: "Costoso (más de £30,000)",
+      text: "Costoso (más de $10,000USD)",
       log: xIcon,
     },
     item3: {
@@ -52,7 +52,7 @@ export const blocksInfo: Block[] = [
       log: checkIcon,
     },
     item2: {
-      text: "Costoso (más de £40,000)",
+      text: "Costoso (más de $15,000USD)",
       log: xIcon,
     },
     item3: {
@@ -70,13 +70,13 @@ export const blocksInfo: Block[] = [
   },
   {
     id: 3,
-    title: "Sin programación",
+    title: "Sin programación - No Code",
     item1: {
       text: "Producto limitado",
       log: xIcon,
     },
     item2: {
-      text: "Bajo costo",
+      text: "Bajo costo (pagas una suscripción, pero no eres dueño)",
       log: checkIcon,
     },
     item3: {
@@ -88,13 +88,13 @@ export const blocksInfo: Block[] = [
       log: xIcon,
     },
     item5: {
-      text: "Self Awareness",
+      text: "Consciencia de sí mismo",
       log: xIcon,
     },
   },
   {
     id: 4,
-    title: "Cofundador técnico",
+    title: "Co-fundador técnico",
     item1: {
       text: "Producto personalizado",
       log: checkIcon,
@@ -112,7 +112,7 @@ export const blocksInfo: Block[] = [
       log: xIcon,
     },
     item5: {
-      text: "Self Awareness",
+      text: "Consciencia de sí mismo",
       log: xIcon,
     },
   },
@@ -124,15 +124,15 @@ export const blocksInfo1 = [
     log: checkIcon,
   },
   {
-    text: "Gran valor (£ 7,5 mil)",
+    text: "Gran valor desde ($5.490USD)",
     log: checkIcon,
   },
   {
-    text: "Corta duración (4-6 semanas)",
+    text: "Corta duración (6-8 semanas)",
     log: checkIcon,
   },
   {
-    text: "Simple process",
+    text: "Proceso simple, sin burocracia",
     log: checkIcon,
   },
   {
@@ -159,17 +159,17 @@ export const blocksInfo2: BlockInfo[] = [
 export const processInfo: ProcessInfo[] = [
   {
     id: 1,
-    title: "Responder en",
-    weeks: "24 horas",
+    title: "Respondemos en",
+    weeks: "48 horas",
   },
   {
     id: 2,
-    title: "Confirmar en",
+    title: "Confirmamos en",
     weeks: "5 dias",
   },
   {
     id: 3,
-    title: "Completa en",
-    weeks: "4-6 semanas",
+    title: "Completamos en",
+    weeks: "6-8 semanas",
   },
 ];

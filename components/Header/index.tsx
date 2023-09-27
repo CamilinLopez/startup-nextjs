@@ -53,19 +53,28 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
-                  src="/images/logo/newlogo/PROTOLYr 7.jpg"
-                  alt="logo"
-                  width={100}
-                  height={10}
-                />
                 {/* <Image
+                  src="/images/logo/logo-2.svg"
+                  alt="logo"
+                  width={140}
+                  height={30}
+                  className="w-full dark:hidden"
+                />
+                <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="hidden w-full dark:block"
                 /> */}
+                <Image
+                  src="/images/logo/newlogo/PROTOLYR 2.jpg"
+                  className="opacity-50
+                   rounded-xl"
+                  alt="logo"
+                  width={140}
+                  height={30}
+                />
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">

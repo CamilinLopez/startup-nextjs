@@ -5,10 +5,10 @@ import Image from "next/image";
 const BlogDetailsPage = () => {
   return (
     <>
-      <Breadcrumb
+      {/* <Breadcrumb
         pageName="Planes"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
+      /> */}
       <Pricing />
     </>
   );
