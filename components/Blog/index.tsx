@@ -33,6 +33,10 @@ const Blog = () => {
       endIndex = parseInt(pag.item);
       startIndex = endIndex - 1;
     }
+    if (endIndex >= blogData.length) {
+      startIndex = blogData.length - 1;
+      endIndex = blogData.length;
+    }
     setBlogsToSwhow(blogData.slice(startIndex, endIndex));
   };
 

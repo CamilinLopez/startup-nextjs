@@ -17,7 +17,7 @@ const Pricing = () => {
           width="665px"
         />
 
-        {/* <div className="w-full">
+        <div className="w-full">
           <div
             className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16"
             data-wow-delay=".1s"
@@ -30,7 +30,7 @@ const Pricing = () => {
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
-              Monthly
+              Pago único  
             </span>
             <div
               onClick={() => setIsMonthly(!isMonthly)}
@@ -55,16 +55,16 @@ const Pricing = () => {
                   : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
-              Yearly
+              Mensual
             </span>
           </div>
-        </div> */}
+        </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Prototipo"
             price={isMonthly ? "1590" : "120"}
-            duration={isMonthly ? "USD" : "yr"}
+            duration={isMonthly ? "pu" : "me"}
             subtitle="Branding, mockups y página de destino para ayudarle a atraer usuarios potenciales, validar la demanda y probar sus suposiciones más riesgosas."
           >
             <OfferList text="Naming y Dominio.cl o .com" status="active" />
@@ -80,9 +80,9 @@ const Pricing = () => {
             <OfferList text="Análisis de sitios web" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="MVP"
+            packageName="MVP Web App"
             price={isMonthly ? "5490" : "789"}
-            duration={isMonthly ? "USD" : "yr"}
+            duration={isMonthly ? "pu" : "me"}
             subtitle="Una aplicación web MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
             <OfferList text="Todo lo de Prototipo" status="active" />
@@ -107,9 +107,9 @@ const Pricing = () => {
             />
           </PricingBox>
           <PricingBox
-            packageName="MVP"
-            price={isMonthly ? "6590" : "999"}
-            duration={isMonthly ? "USD" : "yr"}
+            packageName="MVP App Móvil Híbrida"
+            price={isMonthly ? "6590" : "889"}
+            duration={isMonthly ? "pu" : "me"}
             subtitle="App Móvil Híbrida en Flutter (iOS & Android), MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
             <OfferList text="Todo lo de Prototipo" status="active" />

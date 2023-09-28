@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph } = blog;
+  const { title, image, paragraph, link } = blog;
   return (
     <>
       <div
@@ -15,7 +15,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             <Image src={image} alt="image" fill />
           </div>
           <h3 className="mb-2 text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl text-left">
-            <Link href="/blog">{title}</Link>
+            <Link href={link}>{title}</Link>
           </h3>
           <p className="border-b border-body-color border-opacity-10 pb-3 text-base font-medium text-body-color dark:border-white dark:border-opacity-10 text-left">
             {paragraph}
