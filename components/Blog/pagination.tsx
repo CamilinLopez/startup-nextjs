@@ -3,7 +3,7 @@
 import { PaginationItem } from "@/types/blog";
 
 const Pagination = ({ blogsPerPage }) => {
-  const page: PaginationItem[] = ["Prev", "1", "2", "3", "...", "Next"];
+  const page: PaginationItem[] = ["Prev", "1", "2", "...", "Next"];
 
   const handleClick = (pag: { item: PaginationItem }) => {
     blogsPerPage(pag);

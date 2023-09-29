@@ -12,7 +12,9 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
       >
         <div className="md:w-1/2 p-5 sm:p-8 md:py-2 md:px-6 lg:p-8 xl:py-2 xl:px-5 2xl:p-8 flex flex-col items-start">
           <div className="relative block w-full h-[420px] mb-2">
-            <Image src={image} alt="image" fill />
+            <a href={link}>
+              <Image src={image} alt="image" fill />
+            </a>
           </div>
           <h3 className="mb-2 text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl text-left">
             <Link href={link}>{title}</Link>

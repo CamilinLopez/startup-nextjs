@@ -19,7 +19,7 @@ const questions: Question[] = [
   {
     id: 2,
     title: "¿Cómo sabes que este es el proceso correcto?",
-    text: "In the words of entrepreneur and author of The Lean Startup, Eric Reis - “The minimum viable product is that version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort.” A minimum viable product is an essential step to bringing an idea to life, without over investing your time, capital, and attention.",
+    text: "Porque hemos estado allí y lo hemos hecho varias veces. Construimos nuestro primer negocio (numerro.io) en 2019 y lo vendimos a Startup Studio en 2021, donde utilizamos este proceso exacto para validar nuestra idea, crear una base de usuarios de la que pudiéramos aprender, iterar para adaptar el producto al mercado y escalar el negocio. Desde entonces, hemos repetido el proceso en nuestros otros proyectos y para otros fundadores. Nuestro proceso y enfoque se basan en las mejores prácticas de algunos de los fundadores más respetados del mundo y ahorran tiempo, capital y atención, los tres recursos más valiosos.",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const questions: Question[] = [
   {
     id: 4,
     title: "¿Cómo funciona el pago?",
-    text: "Like most of the SaaS products we build, we use Stripe to manage payments, and in alignment with industry best practice we charge 25% as an upfront deposit, and then the remaining 75% on completion.",
+    text: "Opciones de Pagos:-50% para comenzar y 50% al entregar -8% Descuento Pago 100% por Adelantado-2 a 12 Cuotas por Webpay Plus + 3.4% comisión *Valores neto.",
   },
   {
     id:5,
@@ -101,9 +101,9 @@ function Faq() {
           </h3>
           <a
             className="cursor-pointer text-start text-base font-medium text-body-color"
-            href="https://vercel.com/camilinlopez/startup-nextjs"
+            href="mailto:protolylab.digital@gmail.com"
           >
-            {"hello@simplesuite.co ->"}
+            {"protolylab.digital@gmail.com ->"}
           </a>
         </div>
       </div>

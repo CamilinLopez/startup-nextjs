@@ -23,15 +23,14 @@ const AboutSectionOne = () => {
           <div className="rounded-3xl bg-primary bg-opacity-25 p-5">
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-bold text-black dark:text-white">
-              Protoly Lab
+                Protoly Lab
               </h3>
               <Image
-                src="/images/logo/newlogo/PROTOLYr 4.jpg"
+                src="/images/logo/newlogo/protoly SVG.svg"
                 alt="logo"
-                width={35}
-                height={35}
-                
-                className="rounded-xl opacity-80"
+                width={70}
+                height={70}
+                className="fill-current"
               />
             </div>
             <div className="my-9">
