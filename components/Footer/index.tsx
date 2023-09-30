@@ -29,7 +29,7 @@ const Footer = () => {
                   /> */}
                   
                   <Image
-                    src="/images/logo/newlogo/protoly SVG.svg"
+                    src="/images/logo/newlogo/logo.svg"
                     width={140}
                     height={30}
                     alt="logo"
