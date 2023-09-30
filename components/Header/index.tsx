@@ -68,11 +68,9 @@ const Header = () => {
                   className="hidden w-full dark:block"
                 /> */}
                 <Image
-                  src="/images/logo/newlogo/PROTOLYr 2.jpg"
-                  className="opacity-50
-                   rounded-xl"
+                  src="/images/logo/newlogo/protoly SVG.svg"
                   alt="logo"
-                  width={140}
+                  width={90}
                   height={30}
                 />
               </Link>
