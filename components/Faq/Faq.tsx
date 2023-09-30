@@ -101,9 +101,9 @@ function Faq() {
           </h3>
           <a
             className="cursor-pointer text-start text-base font-medium text-body-color"
-            href="mailto:protolylab.digital@gmail.com"
+            href="mailto:hola@protolylab.digital"
           >
-            {"protolylab.digital@gmail.com ->"}
+            {"hola@protolylab.digital  ->"}
           </a>
         </div>
       </div>
