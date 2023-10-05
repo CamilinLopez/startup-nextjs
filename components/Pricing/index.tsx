@@ -91,7 +91,7 @@ const Pricing = () => {
               status="active"
             />
             <OfferList
-              text="Aplicación Web (3 Funcionalidades)"
+              text="Aplicación Web (4 Funcionalidades)"
               status="active"
             />
             <OfferList text="Autenticacion de usuario" status="active" />
@@ -118,7 +118,7 @@ const Pricing = () => {
               status="active"
             />
             <OfferList
-              text="Aplicación Móvil (2 Funcionalidades)"
+              text="Aplicación Móvil (3 Funcionalidades)"
               status="active"
             />
             <OfferList text="Autenticacion de usuario" status="active" />
