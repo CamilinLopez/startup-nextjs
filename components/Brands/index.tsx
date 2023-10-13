@@ -79,6 +79,13 @@ const brandsData: Brand[] = [
     href: "https://stripe.com/es-us",
     image: "/images/brands/newImages/flutter.svg",
   },
+  {
+    id:12,
+    name:"Mercado Pago",
+    description:"Payments",
+    href:"https://www.mercadopago.com.co/",
+    image: "/images/brands/newImages/mercadopago.svg"
+  }
 ];
 
 const Brands = () => {

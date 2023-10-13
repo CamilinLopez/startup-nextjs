@@ -63,7 +63,7 @@ const Pricing = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Prototipo"
-            price={isMonthly ? "1590" : "120"}
+            price={isMonthly ? "1590" : "150"}
             duration={isMonthly ? "pu" : "me"}
             subtitle="Branding, mockups y página de destino para ayudarle a atraer usuarios potenciales, validar la demanda y probar sus suposiciones más riesgosas."
           >
@@ -110,7 +110,7 @@ const Pricing = () => {
             packageName="MVP App Móvil Híbrida"
             price={isMonthly ? "6590" : "889"}
             duration={isMonthly ? "pu" : "me"}
-            subtitle="App Móvil Híbrida en Flutter (iOS & Android), MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
+            subtitle="App Móvil Híbrida en Flutter o React Native (iOS & Android), MVP para validar el valor de sus productos, generar ingresos e iterar para adaptar el producto al mercado."
           >
             <OfferList text="Todo lo de Prototipo" status="active" />
             <OfferList
