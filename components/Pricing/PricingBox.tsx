@@ -12,16 +12,17 @@ const PricingBox = (props: {
   return (
     <div className="w-full">
       <div
-        className="wow fadeInUp h-full relative z-10 rounded-md bg-white px-8 py-10 shadow-signUp dark:bg-[#1D2144]"
+        className="wow fadeInUp relative z-10 h-full rounded-md bg-white px-8 py-10 shadow-signUp dark:bg-[#1D2144]"
         data-wow-delay=".1s"
       >
         <div className="flex flex-col">
           <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
           </h4>
-          <h3 className="my-4 price mb-2 text-3xl font-bold text-black dark:text-white">
+          <h3 className="price my-4 mb-2 text-3xl font-bold text-black dark:text-white">
             <span className="amount">${price}USD</span>
             <span className="time text-body-color">/{duration}</span>
+            <h3>A 12 cuotas</h3>
           </h3>
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>

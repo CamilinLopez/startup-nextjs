@@ -74,7 +74,7 @@ const Pricing = () => {
             <OfferList text="Redacción" status="active" />
             <OfferList
               text="Maquetas de software (Máx 5 pantallas)"
-              status="active"
+              status="active" 
             />
             <OfferList text="Colección de correo electrónico" status="active" />
             <OfferList text="Análisis de sitios web" status="active" />

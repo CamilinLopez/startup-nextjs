@@ -19,7 +19,7 @@ const questions: Question[] = [
   {
     id: 2,
     title: "¿Cómo sabes que este es el proceso correcto?",
-    text: "Porque hemos estado allí y lo hemos hecho varias veces. Construimos nuestro primer negocio (numerro.io) en 2019 y lo vendimos a Startup Studio en 2021, donde utilizamos este proceso exacto para validar nuestra idea, crear una base de usuarios de la que pudiéramos aprender, iterar para adaptar el producto al mercado y escalar el negocio. Desde entonces, hemos repetido el proceso en nuestros otros proyectos y para otros fundadores. Nuestro proceso y enfoque se basan en las mejores prácticas de algunos de los fundadores más respetados del mundo y ahorran tiempo, capital y atención, los tres recursos más valiosos.",
+    text: "Este proceso exacto para validar nuestra idea, crear una base de usuarios de la que pudiéramos aprender, iterar para adaptar el producto al mercado y escalar el negocio. Desde entonces, hemos repetido el proceso en nuestros otros proyectos y para otros fundadores. Nuestro proceso y enfoque se basan en las mejores prácticas de algunos de los fundadores más respetados del mundo y ahorran tiempo, capital y atención, los tres recursos más valiosos.",
   },
   {
     id: 3,
