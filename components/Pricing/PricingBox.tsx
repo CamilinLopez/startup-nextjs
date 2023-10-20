@@ -22,7 +22,9 @@ const PricingBox = (props: {
           <h3 className="price my-4 mb-2 text-3xl font-bold text-black dark:text-white">
             <span className="amount">${price}USD</span>
             <span className="time text-body-color">/{duration}</span>
-            <h3>A 12 cuotas</h3>
+          </h3>
+          <h3 className="price my-4 mb-2 text-3xl font-bold text-black dark:text-white">
+            A 12 cuotas
           </h3>
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
