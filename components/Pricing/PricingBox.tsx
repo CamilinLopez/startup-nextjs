@@ -8,7 +8,6 @@ const PricingBox = (props: {
   children: React.ReactNode;
 }) => {
   const { price, duration, packageName, subtitle, children } = props;
-
   return (
     <div className="w-full">
       <div
@@ -23,9 +22,11 @@ const PricingBox = (props: {
             <span className="amount">${price}USD</span>
             <span className="time text-body-color">/{duration}</span>
           </h3>
-          <h3 className="price my-4 mb-2 text-3xl font-bold text-black dark:text-white">
-            A 12 cuotas
-          </h3>
+          {duration === "me" && (
+            <h3 className="price my-4 mb-2 text-3xl font-bold text-black dark:text-white">
+              A 12 cuotas
+            </h3>
+          )}
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
