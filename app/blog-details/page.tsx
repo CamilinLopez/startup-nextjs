@@ -1,4 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Pricing from "@/components/Pricing";
 import Image from "next/image";
 
@@ -9,7 +11,9 @@ const BlogDetailsPage = () => {
         pageName="Planes"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       /> */}
+      <Header />
       <Pricing />
+      <Footer />
     </>
   );
 };

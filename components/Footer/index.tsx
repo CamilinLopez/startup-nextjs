@@ -27,7 +27,7 @@ const Footer = () => {
                     width={140}
                     height={30}
                   /> */}
-                  
+
                   <Image
                     src="/images/logo/newlogo/logo.svg"
                     width={140}

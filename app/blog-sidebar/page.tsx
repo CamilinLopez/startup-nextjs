@@ -1,8 +1,11 @@
 import Calendario from "@/components/Calendario/Calendario";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const BlogSidebarPage = () => {
   return (
     <>
+      <Header />
       <section className="overflow-hidden pt-[180px] pb-[120px]">
         <div className="container">
           <div>
@@ -13,6 +16,7 @@ const BlogSidebarPage = () => {
           <Calendario />
         </div>
       </section>
+      <Footer />
     </>
   );
 };

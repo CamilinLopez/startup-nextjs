@@ -1,14 +1,15 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function Proceso() {
   return (
     <>
-      {/* <Breadcrumb
-        pageName="Proceso"
-        description="lorem isdxgvsg sze srgfh srgh rfgchber,er dgerg"
-      /> */}
+      <Header />
+      <Breadcrumb pageName="Proceso" description="Proceso a desarrollar" />
       <Features />
+      <Footer />
     </>
   );
 }

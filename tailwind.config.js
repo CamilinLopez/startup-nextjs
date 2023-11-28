@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -20,6 +21,20 @@ module.exports = {
       primary: "#4A6CF7",
       yellow: "#FBB040",
       "body-color": "#959CB1",
+      red: "#FF0000",
+      green: "#00C853",
+      gray: {
+        50: "#f9fafb",
+        100: "#f3f4f6",
+        200: "#e5e7eb",
+        300: "#d1d5db",
+        400: "#9ca3af", // Tonos más opacos
+        500: "#6b7280",
+        600: "#4b5563",
+        700: "#374151",
+        800: "#1f2937",
+        900: "#111827",
+      },
     },
     screens: {
       xs: "450px",
@@ -45,6 +60,14 @@ module.exports = {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",
         sticky: "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
+      },
+      animation: {
+        "pulse-custom": "pulse 1s infinite",
+      },
+      transitionDelay: {
+        0: "0ms",
+        200: "200ms",
+        400: "400ms",
       },
     },
   },

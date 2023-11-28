@@ -12,15 +12,19 @@ import Poppup from "@/components/Poppup/Poppup";
 import Faq from "@/components/Faq/Faq";
 import Finish from "@/components/Finish/Finish";
 import { Inter } from "@next/font/google";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+      <Header />
       <ScrollUp />
       <Hero />
-      <Poppup />
+      {/* <Poppup /> */}
       <Features />
       <Brands />
       <Blog />
@@ -28,9 +32,10 @@ export default function Home() {
       <AboutSectionTwo />
       <Testimonials />
       <Pricing />
-      <Calendario />
+      {/* <Calendario /> */}
       <Faq />
       <Finish />
+      <Footer />
     </>
   );
 }

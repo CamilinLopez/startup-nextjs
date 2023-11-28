@@ -60,18 +60,18 @@ const menuData: Menu[] = [
         path: "/brands",
         newTab: false,
       },
-      // {
-      //   id: 46,
-      //   title: "Sign In Page",
-      //   path: "/signin",
-      //   newTab: false,
-      // },
-      // {
-      //   id: 47,
-      //   title: "Sing Up Page",
-      //   path: "/signup",
-      //   newTab: false,
-      // },
+      {
+        id: 46,
+        title: "Administrador",
+        path: "/signin",
+        newTab: false,
+      },
+      {
+        id: 47,
+        title: "Dashboard",
+        path: "/dashboard",
+        newTab: false,
+      },
       // {
       //   id: 48,
       //   title: "Error Page",

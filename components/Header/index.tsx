@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { Menu } from "@/types/menu";
+import AxiosInstance from "@/config/axiosConfig";
 
 const Header = () => {
   // Navbar toggle
@@ -11,6 +13,7 @@ const Header = () => {
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const [dashboard, setDashboard] = useState(false);
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -23,6 +26,29 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
+
+    if (typeof window !== "undefined") {
+      const data = localStorage.getItem("token");
+
+      if (data) {
+        AxiosInstance.get("/verify", {
+          headers: {
+            Authorization: `${data}`,
+          },
+        })
+          .then((data) => {
+            if (data.data.autenticado) {
+              setDashboard(true);
+            }
+          })
+          .catch((error) => {
+            if (error.response.data.autenticado === false) {
+              setDashboard(false);
+              localStorage.removeItem("token");
+            }
+          });
+      }
+    }
   });
 
   // submenu handler
@@ -33,6 +59,16 @@ const Header = () => {
     } else {
       setOpenIndex(index);
     }
+  };
+
+  const filterSubMenu = (submenu: Menu[]) => {
+    const filterMenu = submenu.filter((item) => {
+      if (item.id === 46 && dashboard) return false;
+      if (item.id === 47 && !dashboard) return false;
+
+      return true;
+    });
+    return filterMenu;
   };
 
   return (
@@ -50,7 +86,7 @@ const Header = () => {
               <Link
                 href="/"
                 className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-1"
+                  sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
                 {/* <Image
@@ -68,10 +104,10 @@ const Header = () => {
                   className="hidden w-full dark:block"
                 /> */}
                 <Image
-                  src="/images/logo/newlogo/logo.svg"
+                  src="/images/logo/newlogo/logor.svg"
                   alt="logo"
-                  width={90}
-                  height={40}
+                  width={150}
+                  height={150}
                 />
               </Link>
             </div>
@@ -138,15 +174,17 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem) => (
-                                <Link
-                                  href={submenuItem.path}
-                                  key={submenuItem.id}
-                                  className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
-                              ))}
+                              {filterSubMenu(menuItem.submenu).map(
+                                (submenuItem) => (
+                                  <Link
+                                    href={submenuItem.path}
+                                    key={submenuItem.id}
+                                    className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                                  >
+                                    {submenuItem.title}
+                                  </Link>
+                                )
+                              )}
                             </div>
                           </>
                         )}
@@ -156,13 +194,15 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
+                {dashboard && (
+                  <Link
+                    href="/dashboard"
+                    className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
+                  >
+                    Dashboard
+                  </Link>
+                )}
                 {/* <Link
-                  href="/signin"
-                  className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
                   href="/signup"
                   className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
                 >
