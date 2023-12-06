@@ -9,6 +9,7 @@ export const middleware = async (request: NextRequest) => {
     if (!token) {
       return NextResponse.redirect(new URL("http://localhost:3000"));
     }
+    
     try {
       const response = await fetch("http://localhost:3001/verify", {
         headers: {

@@ -6,11 +6,6 @@ import clsx from "clsx";
 import { deleteCookie } from "cookies-next";
 import AxiosInstance from "@/config/axiosConfig";
 
-const handleClick = async () => {
-  deleteCookie("token");
-  localStorage.removeItem("token");
-};
-
 export const Search = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -94,6 +89,11 @@ export const Botones = () => {
 
   const openModal = () => {
     setIsOpen(true);
+  };
+
+  const handleClick = () => {
+    deleteCookie("token");
+    localStorage.removeItem("token");
   };
 
   return (
