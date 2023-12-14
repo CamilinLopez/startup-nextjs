@@ -31,10 +31,12 @@ export default function CrearProyecto() {
     message: "",
     color: "#FFFFFF",
   });
+  const [createModify, setCreateModify] = useState<string>("Crear");
 
-  useEffect(()=>{
-    console.log(id)
-  },[])
+  useEffect(() => {
+    if (id) setCreateModify("Modificar");
+    else setCreateModify("Crear");
+  }, [id]);
 
   const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -67,21 +69,45 @@ export default function CrearProyecto() {
   const createProyect = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    setPending(false);
-    try {
-      const response = await AxiosInstance.post("/project", project);
-      if (response.data)
-        setMessage({
-          message: response.data,
-          color: "text-green",
+    if (createModify === "Modificar") {
+      setPending(false);
+      try {
+        const response = await AxiosInstance.put("/project", {
+          id,
+          newdata: project,
         });
-    } catch (error) {
-      setMessage({
-        message: error.response.data,
-        color: "text-red",
-      });
+        if (response.data) {
+          setMessage({
+            message: response.data,
+            color: "text-green",
+          });
+        }
+      } catch (error) {
+        setMessage({
+          message: error.response.data,
+          color: "text-red",
+        });
+      }
+      setPending(true);
     }
-    setPending(true);
+
+    if (createModify === "Crear") {
+      setPending(false);
+      try {
+        const response = await AxiosInstance.post("/project", project);
+        if (response.data)
+          setMessage({
+            message: response.data,
+            color: "text-green",
+          });
+      } catch (error) {
+        setMessage({
+          message: error.response.data,
+          color: "text-red",
+        });
+      }
+      setPending(true);
+    }
   };
 
   return (
@@ -90,7 +116,7 @@ export default function CrearProyecto() {
         <div className="flex w-full flex-col items-center lg:items-start">
           <div className="space-y-8">
             <div>
-              <h3 className="text-lg font-bold">Crear</h3>
+              <h3 className="text-lg font-bold">{createModify}</h3>
               <p className="text-xs font-medium ">
                 Agrega un nuevo proyecto a tu portfolio
               </p>
@@ -164,6 +190,7 @@ export default function CrearProyecto() {
                   <button
                     className="relative flex w-full items-center justify-center rounded-md border bg-primary p-2 text-base font-bold transition duration-300 hover:bg-primary/80"
                     onClick={createProyect}
+                    name="hola"
                   >
                     <div className="absolute left-0 ml-4">
                       {isPending ? (
@@ -172,7 +199,7 @@ export default function CrearProyecto() {
                         <LoadingDots className="mb-3 bg-white" />
                       )}
                     </div>
-                    <span className="text-white">Crear</span>
+                    <span className="text-white">{createModify}</span>
                   </button>
                   <p className={`font-mono ${message.color}`}>
                     {message.message}

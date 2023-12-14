@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const middleware = async (request: NextRequest) => {
   const { cookies } = request;
 
-  if (request.nextUrl.pathname.endsWith("/dashboard")) {
+  if (request.nextUrl.pathname.startsWith("/dashboard")) {
     // const token = request.nextUrl.searchParams.get("token");
     const token = cookies.get("token")?.value;
     if (!token) {
