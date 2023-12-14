@@ -32,10 +32,36 @@ export default function CrearProyecto() {
     color: "#FFFFFF",
   });
   const [createModify, setCreateModify] = useState<string>("Crear");
+  const [getProject, setGetProject] = useState({
+    id: "",
+    nombre: "",
+    texto: "",
+    linkimagen: "",
+  });
 
   useEffect(() => {
-    if (id) setCreateModify("Modificar");
-    else setCreateModify("Crear");
+    if (id) {
+      setCreateModify("Modificar");
+      AxiosInstance.get(`/project?id=${id}`)
+        .then((data) => {
+          setGetProject(data.data);
+          console.log("sigooo");
+        })
+        .catch((error) => {
+          setMessage({
+            message: error.response.data,
+            color: "text-red",
+          });
+        });
+    } else {
+      setCreateModify("Crear");
+      setGetProject({
+        id: "",
+        nombre: "",
+        texto: "",
+        linkimagen: "",
+      });
+    }
   }, [id]);
 
   const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -134,9 +160,9 @@ export default function CrearProyecto() {
                     className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
                     onChange={handleImageUpload}
                   />
-                  {imageURL ? (
+                  {imageURL || getProject.linkimagen ? (
                     <img
-                      src={imageURL}
+                      src={imageURL || getProject.linkimagen}
                       alt="Uploaded"
                       className="h-full w-full object-cover"
                     />
@@ -171,7 +197,9 @@ export default function CrearProyecto() {
                   type="textarea"
                   name="nombre"
                   onChange={handleOnChange}
-                  placeholder="Titulo..."
+                  placeholder={
+                    getProject.nombre ? getProject.nombre : "Titulo..."
+                  }
                 />
                 <textarea
                   className="rounded-sm border border-black border-opacity-20"
