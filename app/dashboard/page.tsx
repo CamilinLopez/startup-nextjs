@@ -13,7 +13,7 @@ export default function Dashboard() {
   return (
     <>
       <section id="dashboard" className="">
-        hola
+        inicio
       </section>
     </>
   );

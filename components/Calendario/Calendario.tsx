@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect } from "react";
 
@@ -6,6 +6,7 @@ const Calendario = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "text/javascript";
+    script.nonce = "Gsde7EQvtNPnHRVq0FvmQQ";
     script.innerHTML = `
         (function (C, A, L) {
           let p = function (a, ar) { a.q.push(ar); };
@@ -58,3 +59,18 @@ const Calendario = () => {
 };
 
 export default Calendario;
+
+
+// Configurar CSP
+export async function getServerSideProps({ res }) {
+  const nonce = 'Gsde7EQvtNPnHRVq0FvmQQ=='; // Aquí va tu mismo nonce
+
+  res.setHeader(
+    'Content-Security-Policy',
+    `script-src 'nonce-${nonce}' 'strict-dynamic' 'self' https:`
+  );
+
+  return {
+    props: {},
+  };
+}

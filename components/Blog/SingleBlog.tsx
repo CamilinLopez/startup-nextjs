@@ -1,19 +1,36 @@
 "use client";
 
+import AxiosInstance from "@/config/axiosConfig";
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MouseEvent, useState } from "react";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
   const { id, title, image, paragraph, link } = blog;
   const pathname = usePathname();
+  const [isdelete, setIsDelete] = useState(false);
+
+  const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
+    // e.preventDefault();
+
+    const response = await AxiosInstance.delete(`/project?id=${id}`);
+    console.log(response.data);
+    setIsDelete(true);
+  };
+
+  if (isdelete) return null;
+
   return (
     <>
       <div className="relative">
         {pathname === "/dashboard/proyectos" && (
           <div className="absolute right-10 top-10 flex flex-col gap-y-4">
-            <button className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed">
+            <button
+              onClick={handleClick}
+              className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed"
+            >
               Eliminar
             </button>
             <button className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed">

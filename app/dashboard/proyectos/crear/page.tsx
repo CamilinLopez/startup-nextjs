@@ -37,6 +37,7 @@ export default function CrearProyecto() {
     nombre: "",
     texto: "",
     linkimagen: "",
+    website: "",
   });
 
   useEffect(() => {
@@ -45,7 +46,6 @@ export default function CrearProyecto() {
       AxiosInstance.get(`/project?id=${id}`)
         .then((data) => {
           setGetProject(data.data);
-          console.log("sigooo");
         })
         .catch((error) => {
           setMessage({
@@ -60,6 +60,7 @@ export default function CrearProyecto() {
         nombre: "",
         texto: "",
         linkimagen: "",
+        website: "",
       });
     }
   }, [id]);
@@ -205,14 +206,18 @@ export default function CrearProyecto() {
                   className="rounded-sm border border-black border-opacity-20"
                   name="texto"
                   onChange={handleOnChange}
-                  placeholder="Descripcion..."
+                  placeholder={
+                    getProject.texto ? getProject.texto : "Descripcion..."
+                  }
                 />
                 <input
                   className="rounded-sm border border-black border-opacity-20"
                   type="text"
                   name="website"
                   onChange={handleOnChange}
-                  placeholder="Website..."
+                  placeholder={
+                    getProject.website ? getProject.website : "Website..."
+                  }
                 />
                 <div>
                   <button
