@@ -59,18 +59,3 @@ const Calendario = () => {
 };
 
 export default Calendario;
-
-
-// Configurar CSP
-export async function getServerSideProps({ res }) {
-  const nonce = 'Gsde7EQvtNPnHRVq0FvmQQ=='; // Aquí va tu mismo nonce
-
-  res.setHeader(
-    'Content-Security-Policy',
-    `script-src 'nonce-${nonce}' 'strict-dynamic' 'self' https:`
-  );
-
-  return {
-    props: {},
-  };
-}

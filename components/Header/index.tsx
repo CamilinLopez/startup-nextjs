@@ -14,6 +14,7 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
   const [dashboard, setDashboard] = useState(false);
+  const [data1, setData1] = useState(false);
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -29,6 +30,11 @@ const Header = () => {
 
     if (typeof window !== "undefined") {
       const data = localStorage.getItem("token");
+      const id = localStorage.getItem("id");
+
+      AxiosInstance.get(`/user?id=${id}`).then((data) => {
+        setData1(data.data.isadmin);
+      });
 
       if (data) {
         AxiosInstance.get("/verify", {
@@ -37,17 +43,18 @@ const Header = () => {
           },
         })
           .then((data) => {
-            if (data.data.autenticado) {
+            if (data.data.autenticado && data1) {
               setDashboard(true);
             }
           })
           .catch((error) => {
-            if (error.response.data.autenticado === false) {
+            if (error.response.data.autenticado === false || data1 === false) {
               setDashboard(false);
               localStorage.removeItem("token");
             }
           });
       }
+      if (data1 === false) setDashboard(false);
     }
   });
 

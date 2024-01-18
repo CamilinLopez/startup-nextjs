@@ -6,7 +6,9 @@ export const middleware = async (request: NextRequest) => {
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     // const token = request.nextUrl.searchParams.get("token");
     const token = cookies.get("token")?.value;
-    if (!token) {
+    const id = cookies.get("id")?.value;
+
+    if (!token || !id) {
       return NextResponse.redirect(new URL("http://localhost:3000"));
     }
 
@@ -17,8 +19,14 @@ export const middleware = async (request: NextRequest) => {
         },
       });
       const data = await response.json();
-      // console.log(data)
-      if (!data.autenticado)
+
+      const dataUser = await fetch(`http://localhost:3001/user?id=${id}`, {
+        method: "GET",
+      });
+
+      const data1 = await dataUser.json();
+
+      if (!data.autenticado || !data1.isadmin)
         return NextResponse.redirect(new URL("http://localhost:3000"));
     } catch (error) {
       console.log(error);

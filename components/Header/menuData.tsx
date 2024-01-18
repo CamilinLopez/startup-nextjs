@@ -62,7 +62,7 @@ const menuData: Menu[] = [
       },
       {
         id: 46,
-        title: "Administrador",
+        title: "Registrarse",
         path: "/signin",
         newTab: false,
       },

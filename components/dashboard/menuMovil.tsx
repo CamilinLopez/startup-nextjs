@@ -71,13 +71,19 @@ export default function MenuMovil() {
                   <Search />
                 </div>
                 <div className="mb-4">
-                  <Botones />
+                  <Botones closeMovileMenu={closeMovileMenu} />
                 </div>
                 <div className="mb-4">
-                  <PrintList data={listDashboard} />
+                  <PrintList
+                    data={listDashboard}
+                    closeMovileMenu={closeMovileMenu}
+                  />
                 </div>
                 <div>
-                  <PrintList data={listPrincipal} />
+                  <PrintList
+                    data={listPrincipal}
+                    closeMovileMenu={closeMovileMenu}
+                  />
                 </div>
               </div>
             </Dialog.Panel>
