@@ -32,9 +32,11 @@ const Header = () => {
       const data = localStorage.getItem("token");
       const id = localStorage.getItem("id");
 
-      AxiosInstance.get(`/user?id=${id}`).then((data) => {
-        setData1(data.data.isadmin);
-      });
+      AxiosInstance.get(`/user?id=${id}`)
+        .then((data) => {
+          setData1(data.data.isadmin);
+        })
+        .catch((error) => console.log(error));
 
       if (data) {
         AxiosInstance.get("/verify", {

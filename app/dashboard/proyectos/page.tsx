@@ -1,7 +1,7 @@
 "use client";
 
 import AxiosInstance from "@/config/axiosConfig";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Project } from "./crear/page";
 import SingleBlog from "@/components/Blog/SingleBlog";
 import { Blog } from "@/types/blog";
@@ -34,7 +34,7 @@ export default function Proyectos() {
   }, []);
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div
         className="w-full"
         style={{ maxHeight: "500px", overflowY: "auto" }} // Estilos en línea para cada tarjeta
@@ -42,7 +42,10 @@ export default function Proyectos() {
         {!loading && !error ? (
           <div className="flex flex-col gap-4 p-6">
             {data?.map((project) => (
-              <div className="overflow-y-auto rounded-xl shadow-signUp" key={project.id} >
+              <div
+                className="overflow-y-auto rounded-xl shadow-signUp"
+                key={project.id}
+              >
                 <SingleBlog
                   key={project.id}
                   blog={{
@@ -57,7 +60,7 @@ export default function Proyectos() {
             ))}
           </div>
         ) : (
-          <div className="w-full h-full flex justify-center items-center" >
+          <div className="flex h-full w-full items-center justify-center">
             {error ? (
               <div>
                 <h3 className="text-xl font-bold">{error.message}</h3>
@@ -68,6 +71,6 @@ export default function Proyectos() {
           </div>
         )}
       </div>
-    </>
+    </Suspense>
   );
 }

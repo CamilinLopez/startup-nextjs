@@ -80,10 +80,7 @@ export default function MenuMovil() {
                   />
                 </div>
                 <div>
-                  <PrintList
-                    data={listPrincipal}
-                    closeMovileMenu={closeMovileMenu}
-                  />
+                  <PrintList data={listPrincipal} />
                 </div>
               </div>
             </Dialog.Panel>

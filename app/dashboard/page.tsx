@@ -10,7 +10,7 @@ export default function Dashboard() {
       localStorage.setItem("token", token);
       localStorage.setItem("id", id);
     }
-  });
+  }, []);
 
   return (
     <>
