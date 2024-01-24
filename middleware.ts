@@ -7,6 +7,7 @@ export const middleware = async (request: NextRequest) => {
     // const token = request.nextUrl.searchParams.get("token");
     const token = cookies?.get("token");
     const id = cookies.get("id")?.value;
+    
 
     if (!token || !id) {
       return NextResponse.redirect(new URL("http://localhost:3000"));
