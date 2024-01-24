@@ -15,8 +15,8 @@ export default function page() {
       <div className="container">
         <div className="flex flex-col gap-4">
           {blogData.map((blog) => (
-            <div className="rounded-xl shadow-signUp">
-              <SingleBlog key={blog.id} blog={blog} />
+            <div key={blog.id} className="rounded-xl shadow-signUp">
+              <SingleBlog blog={blog} />
             </div>
           ))}
         </div>
