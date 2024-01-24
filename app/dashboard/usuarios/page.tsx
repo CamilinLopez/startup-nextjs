@@ -29,28 +29,17 @@ type User = {
 };
 
 export default function Usuarios() {
-  // const users = [
-  //   {
-  //     id: "afad",
-  //     nombre: "camilo",
-  //     correo: "camilollc98@gmail.com",
-  //     isAdmin: false,
-  //   },
-  //   {
-  //     id: "sfdgvsd",
-  //     nombre: "tania",
-  //     correo: "tanita98@gmail.com",
-  //     isAdmin: false,
-  //   },
-  // ];
   const [users, setUsers] = useState<User[]>([]);
   useEffect(() => {
-    AxiosInstance.get("/user")
-      .then((response) => {
-        const userData = response.data;
-        setUsers(userData);
-      })
-      .catch((error) => console.log(error));
+    const interval = setInterval(() => {
+      AxiosInstance.get("/user")
+        .then((response) => {
+          const userData = response.data;
+          setUsers(userData);
+        })
+        .catch((error) => console.log(error));
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const handleOnClick = async ({
@@ -64,7 +53,6 @@ export default function Usuarios() {
       const response = await AxiosInstance.put("/user", { isadmin, id });
       const updateUser: User[] = (await AxiosInstance.get("/user")).data;
       setUsers(updateUser);
-      console.log(updateUser);
     } catch (error) {
       console.log(error);
     }

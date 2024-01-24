@@ -5,7 +5,7 @@ export const middleware = async (request: NextRequest) => {
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     // const token = request.nextUrl.searchParams.get("token");
-    const token = cookies.get("token")?.value;
+    const token = cookies?.get("token");
     const id = cookies.get("id")?.value;
 
     if (!token || !id) {
@@ -13,16 +13,20 @@ export const middleware = async (request: NextRequest) => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/verify", {
+      const response = await fetch("https://protolylab.onrender.com/verify", {
         headers: {
           Authorization: `${token}`,
         },
       });
       const data = await response.json();
+      console.log(data);
 
-      const dataUser = await fetch(`http://localhost:3001/user?id=${id}`, {
-        method: "GET",
-      });
+      const dataUser = await fetch(
+        `https://protolylab.onrender.com/user?id=${id}`,
+        {
+          method: "GET",
+        }
+      );
 
       const data1 = await dataUser.json();
 
