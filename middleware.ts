@@ -10,7 +10,7 @@ export const middleware = async (request: NextRequest) => {
     
 
     if (!token || !id) {
-      return NextResponse.redirect(new URL("http://localhost:3000"));
+      return NextResponse.redirect(new URL("https://www.protolylab.digital"));
     }
 
     try {
@@ -32,7 +32,7 @@ export const middleware = async (request: NextRequest) => {
       const data1 = await dataUser.json();
 
       if (!data.autenticado || !data1.isadmin)
-        return NextResponse.redirect(new URL("http://localhost:3000"));
+        return NextResponse.redirect(new URL("https://www.protolylab.digital"));
     } catch (error) {
       console.log(error);
     }
