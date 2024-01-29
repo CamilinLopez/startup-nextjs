@@ -6,6 +6,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { Menu } from "@/types/menu";
 import AxiosInstance from "@/config/axiosConfig";
+import Cookies from "js-cookie";
 
 const Header = () => {
   // Navbar toggle

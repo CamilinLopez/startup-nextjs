@@ -29,6 +29,8 @@ const SigninPage = () => {
                 <p className="mb-11 text-center text-base font-medium text-body-color">
                   Inicia sesión en tu cuenta para un proceso más rápido.
                 </p>
+                {/* https://protolylab.onrender.com/auth/google */}
+                {/* http://localhost:3001/auth/google */}
                 <Link href="https://protolylab.onrender.com/auth/google">
                   <button className="mb-6 flex w-full items-center justify-center rounded-md bg-white p-3 text-base font-medium text-body-color shadow-one hover:text-primary dark:bg-[#242B51] dark:text-body-color dark:shadow-signUp dark:hover:text-white">
                     <span className="mr-3">
