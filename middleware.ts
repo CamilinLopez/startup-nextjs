@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import url from "url";
 
 export const middleware = async (request: NextRequest) => {
-  const { cookies } = request;
+  const { searchParams } = new url.URL(request.url);
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    cookies.set("infocami", "1998");
-    const data = cookies.get("userid");
-
+    const userid = searchParams.get("id");
     return NextResponse.redirect(
-      new URL(`https://www.protolylab.digital?queso=${data}`)
+      new URL(`https://www.protolylab.digital?userid=${userid}`)
     );
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
