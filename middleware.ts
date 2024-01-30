@@ -8,7 +8,7 @@ export const middleware = async (request: NextRequest) => {
     const data = cookies.get("userid");
 
     return NextResponse.redirect(
-      new URL("https://www.protolylab.digital?queso=toquiero")
+      new URL(`https://www.protolylab.digital?queso=${data}`)
     );
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
