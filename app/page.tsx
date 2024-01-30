@@ -22,8 +22,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const data = Cookies.get("infocami");
-  console.log("holaaaaa");
-  console.log(data,"sdfad")
+  const data1 = Cookies.get("userid");
+  console.log("holaaaaa", data1);
+  console.log(data, "sdfad");
   return (
     <>
       <Header />
