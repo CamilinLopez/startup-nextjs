@@ -1,16 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export const middleware = async (request: NextRequest) => {
-  const { cookies, nextUrl:{search} } = request;
-  const urlSearchParams = new URLSearchParams(search);
-
+  const { cookies } = request;
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     cookies.set("infocami", "1998");
     const data = cookies.get("userid");
-    urlSearchParams.set('zorro', "lorena");
 
-    return NextResponse.redirect(new URL("https://www.protolylab.digital"));
+    return NextResponse.redirect(
+      new URL("https://www.protolylab.digital?queso=toquiero")
+    );
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
     // }
