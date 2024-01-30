@@ -1,19 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { NextApiResponse, NextApiRequest } from "next";
-import cookies from "next-cookies";
 
-export const middleware = async (
-  request: NextRequest,
-  req: NextApiRequest,
-  res: NextApiResponse
-) => {
-  // const { cookies } = request;
-  const { userid } = cookies({ req });
+export const middleware = async (request: NextRequest) => {
+  const { cookies } = request;
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    res.setHeader("Set-Cookie", "infocamiii=15687222145; Path=/; HttpOnly");
-    console.log("cookie infocamii puesta");
-    // cookies.set("infocami", "1998");
+    cookies.set("infocami", "1998");
     return NextResponse.redirect(new URL("https://www.protolylab.digital"));
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
