@@ -5,7 +5,7 @@ export const middleware = async (request: NextRequest) => {
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     cookies.set("infocami", "1998");
-    return NextResponse.redirect(new URL("http://localhost:3000"));
+    return NextResponse.redirect(new URL("https://www.protolylab.digital"));
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
     // }
