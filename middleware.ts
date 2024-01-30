@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import url from "url";
 
 export const middleware = async (request: NextRequest) => {
-  const { searchParams } = new url.URL(request.url);
+  const { searchParams } = new URL(request.url);
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     const userid = searchParams.get("id");
