@@ -6,7 +6,7 @@ export const middleware = async (request: NextRequest) => {
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     // const userid = searchParams.get("id");
-    // return NextResponse.redirect(
+    return NextResponse.redirect(
       new URL(`https://www.protolylab.digital?userid=${"userid"}`)
     );
     // if (!token || !id) {
