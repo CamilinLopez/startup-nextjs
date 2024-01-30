@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import url from "url";
 
 export const middleware = async (request: NextRequest) => {
-  const { searchParams } = new url.URL(request.url);
+  // const { searchParams } = new url.URL(request.url);
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    const userid = searchParams.get("id");
-    return NextResponse.redirect(
-      new URL(`https://www.protolylab.digital?userid=${userid}`)
+    // const userid = searchParams.get("id");
+    // return NextResponse.redirect(
+      new URL(`https://www.protolylab.digital?userid=${"userid"}`)
     );
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
