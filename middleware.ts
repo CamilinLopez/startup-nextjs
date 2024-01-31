@@ -3,12 +3,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import { cookies } from "next/headers";
 
-export const middleware = async (req: NextApiRequest, request: NextRequest) => {
-  const viewedWelcomeMessage = req.cookies.userid;
-
+export const middleware = async (request: NextRequest) => {
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
+    const data = request.cookies.get("userid");
     return NextResponse.redirect(
-      new URL(`https://www.protolylab.digital?id=${viewedWelcomeMessage}`)
+      new URL(`https://www.protolylab.digital?id=${data}`)
     );
   }
 
