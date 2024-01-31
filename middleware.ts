@@ -3,12 +3,12 @@ import { NextResponse } from "next/server";
 
 export const middleware = (request: NextRequest) => {
   const response = NextResponse.next();
-  response.cookies.set("camilo", "1998");
+  response.cookies.set("camilo", "1999");
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     return NextResponse.redirect(
       new URL(
-        `https://www.protolylab.digital?camilo?${request.cookies.get("camilo")}`
+        `https://www.protolylab.digital?camilo=${request.cookies.get("camilo")}`
       )
     );
   }
