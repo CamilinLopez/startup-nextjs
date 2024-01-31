@@ -6,7 +6,11 @@ export const middleware = (request: NextRequest) => {
   response.cookies.set("camilo", "1998");
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    return NextResponse.redirect(new URL(`http://localhost:3000`));
+    return NextResponse.redirect(
+      new URL(
+        `https://www.protolylab.digital?camilo?${request.cookies.get("camilo")}`
+      )
+    );
   }
 
   // const cookie = cookies();
