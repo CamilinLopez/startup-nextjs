@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 
 export const middleware = async (request: NextRequest) => {
-  const { searchParams } = new URL(request.url);
-
+  const cookie = cookies();
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    const userid = searchParams.get("id");
+    const data = cookie.get("userid");
     return NextResponse.redirect(
-      new URL(`https://www.protolylab.digital?userid=${userid}`)
+      new URL(`https://www.protolylab.digital?id=${data}`)
     );
     // if (!token || !id) {
     //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
