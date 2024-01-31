@@ -6,6 +6,9 @@ import { cookies } from "next/headers";
 export const middleware = async (request: NextRequest) => {
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     const data = request.cookies.get("userid");
+    const response = NextResponse.next();
+
+    response.cookies.set("camilo", "1998");
     return NextResponse.redirect(
       new URL(`https://www.protolylab.digital?id=${data}`)
     );
