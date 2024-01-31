@@ -16,15 +16,10 @@ import Finish from "@/components/Finish/Finish";
 import { Inter } from "@next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Cookies from "js-cookie";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const data = Cookies.get("infocami");
-  const data1 = Cookies.get("userid");
-  console.log("holaaaaa", data1);
-  console.log(data, "sdfad");
   return (
     <>
       <Header />

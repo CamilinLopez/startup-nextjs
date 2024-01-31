@@ -1,17 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
-import { cookies } from "next/headers";
+export const middleware = (request: NextRequest) => {
+  const response = NextResponse.next();
+  response.cookies.set("camilo", "1998");
 
-export const middleware = async (request: NextRequest) => {
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    const data = request.cookies.get("userid");
-    const response = NextResponse.next();
-
-    response.cookies.set("camilo", "1998");
-    return NextResponse.redirect(
-      new URL(`https://www.protolylab.digital?id=${data}`)
-    );
+    return NextResponse.redirect(new URL(`http://localhost:3000`));
   }
 
   // const cookie = cookies();
@@ -49,5 +44,5 @@ export const middleware = async (request: NextRequest) => {
   // }
   //}
 
-  return;
+  return response;
 };
