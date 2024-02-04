@@ -27,14 +27,14 @@ const Blog = () => {
         }));
         setProjects(newdata);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {});
   }, [setProjects]);
 
   useEffect(() => {
     if (projects && projects.length > 0) {
       setBlogsToSwhow(projects.slice(0, 1));
     }
-  },[projects]);
+  }, [projects]);
 
   const blogsPerPage = (pag: { item: PaginationItem }) => {
     if (pag.item === "Prev") {

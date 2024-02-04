@@ -1,21 +1,9 @@
 "use client";
 
-import { MouseEvent } from "react";
 import Link from "next/link";
-import AxiosInstance from "@/config/axiosConfig";
+const URL_REDIRECT = process.env.NEXT_PUBLIC_REDIRECT_URL_CALLBACK_PRODUCTION;
 
 const SigninPage = () => {
-  const handleOnClick = async (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-
-    try {
-      const response = await AxiosInstance.get("/auth/google/callback");
-      // console.log(response)
-    } catch (error) {
-      // console.log(error)
-    }
-  };
-
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
@@ -29,9 +17,7 @@ const SigninPage = () => {
                 <p className="mb-11 text-center text-base font-medium text-body-color">
                   Inicia sesión en tu cuenta para un proceso más rápido.
                 </p>
-                {/* https://protolylab.onrender.com/auth/google */}
-                {/* http://localhost:3001/auth/google */}
-                <Link href="https://protolylab.onrender.com/auth/google">
+                <Link href={URL_REDIRECT}>
                   <button className="mb-6 flex w-full items-center justify-center rounded-md bg-white p-3 text-base font-medium text-body-color shadow-one hover:text-primary dark:bg-[#242B51] dark:text-body-color dark:shadow-signUp dark:hover:text-white">
                     <span className="mr-3">
                       <svg

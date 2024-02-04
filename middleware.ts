@@ -1,53 +1,44 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+const BACK_PRODUCTION_URL = process.env.BACK_PRODUCTION_URL;
+const CLIENT_PRODUCTION_URL = process.env.CLIENT_PRODUCTION_URL;
 
-export const middleware = (request: NextRequest) => {
+export const middleware = async (request: NextRequest) => {
   const response = NextResponse.next();
-  response.cookies.set("camilo", "1999");
+  const { cookies } = response;
+
+  const {
+    nextUrl: { searchParams },
+  } = request;
 
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
-    const data = request.cookies.get("camilo");
-    const data1 = request.cookies.get("userid");
-    const data2 = `${data}` + `${data1}`;
-    return NextResponse.redirect(
-      new URL(`https://www.protolylab.digital?camilo=${data2}`)
-    );
+    const idcookie = request.cookies.get("userid");
+    const idparams = searchParams.get("id");
+    let id: any;
+
+    if (idcookie) id = idcookie.value;
+    if (idparams && !id) id = idparams;
+
+    try {
+      const response = await fetch(
+        `${BACK_PRODUCTION_URL}/auth/google/verify?id=${id}`
+      );
+      const dataUser = await response.json();
+
+      if (dataUser.error) throw new Error(dataUser.error);
+      if (!dataUser.validtoken || !dataUser.isadmin)
+        throw new Error(dataUser.error);
+
+      if (dataUser.validtoken && dataUser.isadmin) {
+        cookies.set("userid", dataUser.user.userId);
+        cookies.set("token", dataUser.token);
+        cookies.set("isadmin", dataUser.isadmin);
+      }
+    } catch (error) {
+      return NextResponse.redirect(
+        new URL(`${CLIENT_PRODUCTION_URL}`, request.url)
+      );
+    }
   }
-
-  // const cookie = cookies();
-  // if (request.nextUrl.pathname.startsWith("/dashboard")) {
-  //   const data = cookie.get("userid");
-  //   return NextResponse.redirect(
-  //     new URL(`https://www.protolylab.digital?id=${data}`)
-  //   );
-  // if (!token || !id) {
-  //   return NextResponse.redirect(new URL("https://www.protolylab.digital"));
-  // }
-
-  // try {
-  //   const response = await fetch("https://protolylab.onrender.com/verify", {
-  //     headers: {
-  //       Authorization: `${token}`,
-  //     },
-  //   });
-  //   const data = await response.json();
-  //   console.log(data);
-
-  //   const dataUser = await fetch(
-  //     `https://protolylab.onrender.com/user?id=${id}`,
-  //     {
-  //       method: "GET",
-  //     }
-  //   );
-
-  //   const data1 = await dataUser.json();
-
-  //   if (!data.autenticado || !data1.isadmin)
-  //     return NextResponse.redirect(new URL("https://www.protolylab.digital"));
-  // } catch (error) {
-  //   console.log(error);
-  // }
-  //}
-
   return response;
 };

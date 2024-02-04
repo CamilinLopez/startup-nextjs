@@ -12,7 +12,6 @@ export const Search = () => {
     const val = e.target as HTMLFormElement;
     const search = val.search as HTMLInputElement;
 
-    // console.log(search.value);
   };
   return (
     <form onSubmit={onSubmit} className="w-max-[200px] relative w-full">
@@ -30,12 +29,21 @@ export const Search = () => {
   );
 };
 
-export const PrintList = ({ data, closeMovileMenu }: { data: List[], closeMovileMenu?: () => void }) => {
+export const PrintList = ({
+  data,
+  closeMovileMenu,
+}: {
+  data: List[];
+  closeMovileMenu?: () => void;
+}) => {
   return (
     <div className="flex flex-col">
       {data.map((data: List) => (
         <Link href={data.path} key={data.id} className="my-1">
-          <button onClick={closeMovileMenu} className="text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed">
+          <button
+            onClick={closeMovileMenu}
+            className="text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed"
+          >
             {data.title}
           </button>
         </Link>
@@ -83,7 +91,7 @@ export const Modal = ({ closeModal }) => {
   );
 };
 
-export const Botones = ({closeMovileMenu = () => {}}) => {
+export const Botones = ({ closeMovileMenu = () => {} }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -92,7 +100,8 @@ export const Botones = ({closeMovileMenu = () => {}}) => {
 
   const handleClick = () => {
     deleteCookie("token");
-    localStorage.removeItem("token");
+    deleteCookie("isadmin");
+    deleteCookie("userid");
   };
 
   return (

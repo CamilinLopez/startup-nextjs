@@ -1,10 +1,8 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
-const axiosHttpAdapter = require("axios-http-client");
+import axios, { AxiosInstance } from "axios";
+const BACK_URL = process.env.BACK_PRODUCTION_URL;
 
-// https://protolylab.onrender.com
-// http://localhost:3001
 const AxiosInstance: AxiosInstance = axios.create({
-  baseURL: "https://protolylab.onrender.com",
+  baseURL: BACK_URL,
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",

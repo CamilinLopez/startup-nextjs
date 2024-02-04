@@ -6,7 +6,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { Menu } from "@/types/menu";
 import AxiosInstance from "@/config/axiosConfig";
-import Cookies from "js-cookie";
+import { getCookie } from "cookies-next";
 
 const Header = () => {
   // Navbar toggle
@@ -15,7 +15,7 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
   const [dashboard, setDashboard] = useState(false);
-  const [data1, setData1] = useState(false);
+  const [id, setid] = useState("");
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -29,35 +29,16 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
 
-    if (typeof window !== "undefined") {
-      const data = localStorage.getItem("token");
-      const id = localStorage.getItem("id");
+    setid(getCookie("userid"));
 
-      AxiosInstance.get(`/user?id=${id}`)
-        .then((data) => {
-          setData1(data.data.isadmin);
-        })
-        .catch((error) => console.log(error));
-
-      if (data) {
-        AxiosInstance.get("/verify", {
-          headers: {
-            Authorization: `${data}`,
-          },
-        })
-          .then((data) => {
-            if (data.data.autenticado && data1) {
-              setDashboard(true);
-            }
-          })
-          .catch((error) => {
-            if (error.response.data.autenticado === false || data1 === false) {
-              setDashboard(false);
-              localStorage.removeItem("token");
-            }
-          });
-      }
-      if (data1 === false) setDashboard(false);
+    if (id) {
+      AxiosInstance.get(`/auth/google/verify?id=${id}`)
+        .then((response) =>
+          response.data.isadmin && response.data.validtoken
+            ? setDashboard(true)
+            : setDashboard(false)
+        )
+        .catch((error) => setDashboard(false));
     }
   });
 
@@ -187,7 +168,12 @@ const Header = () => {
                               {filterSubMenu(menuItem.submenu).map(
                                 (submenuItem) => (
                                   <Link
-                                    href={submenuItem.path}
+                                    // href={submenuItem.path}
+                                    href={
+                                      submenuItem.id === 47
+                                        ? `${submenuItem.path}/?id=${id}`
+                                        : submenuItem.path
+                                    }
                                     key={submenuItem.id}
                                     className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
                                   >
@@ -206,7 +192,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 {dashboard && (
                   <Link
-                    href="/dashboard"
+                    href={`/dashboard?id=${id}`}
                     className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
                   >
                     Dashboard

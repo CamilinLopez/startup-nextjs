@@ -16,7 +16,6 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
     // e.preventDefault();
 
     const response = await AxiosInstance.delete(`/project?id=${id}`);
-    console.log(response.data);
     setIsDelete(true);
   };
 

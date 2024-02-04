@@ -37,7 +37,7 @@ export default function Usuarios() {
           const userData = response.data;
           setUsers(userData);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {});
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -53,9 +53,7 @@ export default function Usuarios() {
       const response = await AxiosInstance.put("/user", { isadmin, id });
       const updateUser: User[] = (await AxiosInstance.get("/user")).data;
       setUsers(updateUser);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   return (
