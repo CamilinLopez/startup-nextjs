@@ -11,7 +11,6 @@ export const Search = () => {
 
     const val = e.target as HTMLFormElement;
     const search = val.search as HTMLInputElement;
-
   };
   return (
     <form onSubmit={onSubmit} className="w-max-[200px] relative w-full">
@@ -52,7 +51,7 @@ export const PrintList = ({
   );
 };
 
-export const Modal = ({ closeModal }) => {
+export const Modal = ({ closeModal, closeMovileMenu }) => {
   return (
     <div className="fixed top-0 left-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-50">
       <div className="flex w-52 flex-col rounded-md bg-white">
@@ -65,7 +64,13 @@ export const Modal = ({ closeModal }) => {
           </span>
         </div>
         <div className="mx-3 mb-2 flex flex-col text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed">
-          <Link onClick={closeModal} href="/dashboard/proyectos/crear">
+          <Link
+            onClick={() => {
+              closeModal();
+              closeMovileMenu();
+            }}
+            href="/dashboard/proyectos/crear"
+          >
             Proyecto
           </Link>
           <Link onClick={closeModal} href="/dashboard/pricing/crear">
@@ -127,7 +132,12 @@ export const Botones = ({ closeMovileMenu = () => {} }) => {
         >
           Crear
         </button>
-        {isOpen && <Modal closeModal={() => setIsOpen(false)} />}
+        {isOpen && (
+          <Modal
+            closeMovileMenu={closeMovileMenu}
+            closeModal={() => setIsOpen(false)}
+          />
+        )}
       </div>
       <div className="flex space-x-2">
         <svg
