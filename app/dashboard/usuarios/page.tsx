@@ -99,7 +99,7 @@ export default function Usuarios() {
                   }
                   className="w-1/2 rounded-md border bg-primary p-1 text-xs text-white transition duration-300 hover:bg-primary/80"
                 >
-                  {user.isadmin === true ? "deshabilitar" : "habilitar"}
+                  {user.isadmin === true ? "Desactivar" : "habilitar"}
                 </button>
               </div>
             </div>
