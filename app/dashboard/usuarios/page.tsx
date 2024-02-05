@@ -97,7 +97,7 @@ export default function Usuarios() {
                   onClick={() =>
                     handleOnClick({ isadmin: user.isadmin, id: user.id })
                   }
-                  className="w-1/2 rounded-md border bg-primary p-1 text-sm text-white transition duration-300 hover:bg-primary/80"
+                  className="w-1/2 rounded-md border bg-primary p-1 text-xs text-white transition duration-300 hover:bg-primary/80"
                 >
                   {user.isadmin === true ? "deshabilitar" : "habilitar"}
                 </button>
