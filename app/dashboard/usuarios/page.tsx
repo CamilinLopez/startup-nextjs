@@ -1,6 +1,5 @@
 "use client";
 import AxiosInstance from "@/config/axiosConfig";
-import { error } from "console";
 import { useState, useEffect, Suspense } from "react";
 
 type Dataname = {
