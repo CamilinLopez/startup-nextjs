@@ -40,7 +40,7 @@ export default function Proyectos() {
         // style={{ maxHeight: "500px", overflowY: "auto" }} // Estilos en línea para cada tarjeta
       >
         {!loading && !error ? (
-          <div className="flex flex-col gap-4 p-6 h-screen bg-yellow">
+          <div className="flex flex-col gap-4 p-6 h-auto">
             {data?.map((project) => (
               <div
                 className="overflow-y-auto rounded-xl shadow-signUp"
