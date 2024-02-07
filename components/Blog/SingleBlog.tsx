@@ -42,7 +42,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             </p>
             <div>
               {pathname === "/dashboard/proyectos" && (
-                <div className="absolute right-10 top-10 flex flex-col gap-y-4">
+                <div className="flex gap-x-4">
                   <button
                     onClick={handleClick}
                     className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed"
