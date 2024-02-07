@@ -47,7 +47,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
                     onClick={handleClick}
                     className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed"
                   >
-                    Eliminar
+                    Elim
                   </button>
                   <button className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed">
                     <Link href={`/dashboard/proyectos/crear/?id=${id}`}>
