@@ -23,7 +23,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
 
   return (
     <>
-      <div className="relative">
+      <div className="h-screen">
         <div
           className="wow fadeInUp flex flex-col justify-center overflow-hidden rounded-md bg-white shadow-one dark:bg-dark md:flex-row"
           data-wow-delay=".1s"
