@@ -23,7 +23,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
 
   return (
     <>
-      <div className="h-screen">
+      <div className="h-auto">
         <div className="h-full flex flex-col justify-center overflow-hidden rounded-md shadow-one dark:bg-dark md:flex-row">
           <div className="flex flex-col items-start p-5 sm:p-8 md:w-1/2 md:py-2 md:px-6 lg:p-8 xl:py-2 xl:px-5 2xl:p-8">
             <div className="relative mb-2 block h-[420px] w-full">

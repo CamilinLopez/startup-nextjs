@@ -43,7 +43,7 @@ export default function Proyectos() {
           <div className="flex flex-col gap-4 p-6 h-auto">
             {data?.map((project) => (
               <div
-                className="overflow-y-auto rounded-xl shadow-signUp"
+                className="overflow-y-auto rounded-xl shadow-signUp h-auto"
                 key={project.id}
               >
                 <SingleBlog
