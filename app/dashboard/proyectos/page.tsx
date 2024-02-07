@@ -36,14 +36,14 @@ export default function Proyectos() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div
-        className="w-auto h-auto"
+        className="w-full h-auto"
         // style={{ maxHeight: "500px", overflowY: "auto" }} // Estilos en línea para cada tarjeta
       >
         {!loading && !error ? (
           <div className="flex flex-col gap-4 p-6 h-auto">
             {data?.map((project) => (
               <div
-                className="overflow-y-auto rounded-xl shadow-signUp h-auto"
+                className="overflow-y-auto rounded-xl shadow-signUp h-auto w-full"
                 key={project.id}
               >
                 <SingleBlog
