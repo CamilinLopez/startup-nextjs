@@ -24,21 +24,6 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
   return (
     <>
       <div className="relative">
-        {pathname === "/dashboard/proyectos" && (
-          <div className="absolute right-10 top-10 flex flex-col gap-y-4">
-            <button
-              onClick={handleClick}
-              className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed"
-            >
-              Eliminar
-            </button>
-            <button className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed">
-              <Link href={`/dashboard/proyectos/crear/?id=${id}`}>
-                Modificar
-              </Link>
-            </button>
-          </div>
-        )}
         <div
           className="wow fadeInUp flex flex-col justify-center overflow-hidden rounded-md bg-white shadow-one dark:bg-dark md:flex-row"
           data-wow-delay=".1s"
@@ -55,6 +40,23 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             <p className="border-b border-body-color border-opacity-10 pb-3 text-left text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
               {paragraph}
             </p>
+            <div>
+              {pathname === "/dashboard/proyectos" && (
+                <div className="absolute right-10 top-10 flex flex-col gap-y-4">
+                  <button
+                    onClick={handleClick}
+                    className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed"
+                  >
+                    Eliminar
+                  </button>
+                  <button className="rounded-md bg-dark/30 p-1 text-base font-medium leading-relaxed shadow-signUp transition duration-300 hover:bg-dark/50 sm:text-lg sm:leading-relaxed">
+                    <Link href={`/dashboard/proyectos/crear/?id=${id}`}>
+                      Modificar
+                    </Link>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
