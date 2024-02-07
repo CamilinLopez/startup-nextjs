@@ -36,7 +36,7 @@ export default function Proyectos() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div
-        className="w-full"
+        className="w-auto h-auto"
         // style={{ maxHeight: "500px", overflowY: "auto" }} // Estilos en línea para cada tarjeta
       >
         {!loading && !error ? (
