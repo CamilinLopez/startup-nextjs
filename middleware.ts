@@ -34,15 +34,15 @@ export const middleware = async (request: NextRequest) => {
         expiredDate.setTime(expiredDate.getTime() + 1 * 60 * 60 * 1000);
 
         cookies.set("userid", dataUser.user.userId, {
-          expires: expiredDate,
+          // expires: expiredDate,
           domain: ".protolylab.digital",
         });
         cookies.set("token", dataUser.token, {
-          expires: expiredDate,
+          // expires: expiredDate,
           domain: ".protolylab.digital",
         });
         cookies.set("isadmin", dataUser.isadmin, {
-          expires: expiredDate,
+          // expires: expiredDate,
           domain: ".protolylab.digital",
         });
       }
