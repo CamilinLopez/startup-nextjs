@@ -104,9 +104,9 @@ export const Botones = ({ closeMovileMenu = () => {} }) => {
   };
 
   const handleClick = () => {
-    deleteCookie("token", { domain: ".protolylab.digital" });
-    deleteCookie("isadmin", { domain: ".protolylab.digital" });
-    deleteCookie("userid", { domain: ".protolylab.digital" });
+    deleteCookie("token");
+    deleteCookie("isadmin");
+    deleteCookie("userid");
   };
 
   return (
