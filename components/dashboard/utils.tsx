@@ -104,9 +104,9 @@ export const Botones = ({ closeMovileMenu = () => {} }) => {
   };
 
   const handleClick = () => {
-    // deleteCookie("token");
-    // deleteCookie("isadmin");
-    // deleteCookie("userid");
+    deleteCookie("token");
+    deleteCookie("isadmin");
+    deleteCookie("userid");
   };
 
   return (
