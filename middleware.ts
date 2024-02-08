@@ -29,14 +29,14 @@ export const middleware = async (request: NextRequest) => {
       if (!dataUser.validtoken || !dataUser.isadmin)
         throw new Error(dataUser.error);
 
-      // if (dataUser.validtoken && dataUser.isadmin) {
+      if (dataUser.validtoken && dataUser.isadmin) {
         let expiredDate = new Date();
         expiredDate.setTime(expiredDate.getTime() + 1 * 60 * 60 * 1000);
 
         cookies.set("userid", dataUser.user.userId, { expires: expiredDate });
         cookies.set("token", dataUser.token, { expires: expiredDate });
         cookies.set("isadmin", dataUser.isadmin, { expires: expiredDate });
-      
+      }
     } catch (error) {
       return NextResponse.redirect(
         new URL(`${CLIENT_PRODUCTION_URL}`, request.url)
