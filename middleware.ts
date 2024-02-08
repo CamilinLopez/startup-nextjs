@@ -31,7 +31,7 @@ export const middleware = async (request: NextRequest) => {
 
       if (dataUser.validtoken && dataUser.isadmin) {
         let expiredDate = new Date();
-        expiredDate.setTime(expiredDate.getMinutes() + 5);
+        expiredDate.setTime(expiredDate.getTime() + 1 * 60 * 60 * 1000);
 
         cookies.set("userid", dataUser.user.userId, {
           expires: expiredDate,
