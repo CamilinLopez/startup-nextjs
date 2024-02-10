@@ -36,14 +36,17 @@ export const middleware = async (request: NextRequest) => {
         cookies.set("userid", dataUser.user.userId, {
           expires: expiredDate,
           domain: ".protolylab.digital",
+          secure: true,
         });
         cookies.set("token", dataUser.token, {
           expires: expiredDate,
           domain: ".protolylab.digital",
+          secure: true,
         });
         cookies.set("isadmin", dataUser.isadmin, {
           expires: expiredDate,
           domain: ".protolylab.digital",
+          secure: true,
         });
       }
     } catch (error) {
