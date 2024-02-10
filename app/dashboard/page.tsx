@@ -4,7 +4,7 @@ import { setCookie } from "cookies-next";
 
 export default function Dashboard() {
   const params = useSearchParams();
-  setCookie("usreid", params.get("id"));
+  setCookie("userid", params.get("id"));
   return (
     <>
       <section id="dashboard" className="">
