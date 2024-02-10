@@ -1,9 +1,9 @@
 "use client";
-import { useRouter } from "next/router";
+import { useSearchParams } from "next/navigation";
 
 export default function Dashboard() {
-  const router = useRouter();
-  console.log(router.query);
+  const params = useSearchParams();
+  console.log(params);
   return (
     <>
       <section id="dashboard" className="">
