@@ -3,7 +3,7 @@ import { List } from "./type";
 import Link from "next/link";
 import { useState } from "react";
 import clsx from "clsx";
-import { deleteCookie } from "cookies-next";
+import { deleteCookie, setCookie } from "cookies-next";
 
 export const Search = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -104,9 +104,9 @@ export const Botones = ({ closeMovileMenu = () => {} }) => {
   };
 
   const handleClick = () => {
-    deleteCookie("token", { domain: ".protolylab.digital" });
-    deleteCookie("isadmin", { domain: ".protolylab.digital" });
-    deleteCookie("userid", { domain: ".protolylab.digital" });
+    deleteCookie("token", { domain: ".protolylab.digital", secure: true });
+    deleteCookie("isadmin", { domain: ".protolylab.digital", secure: true });
+    deleteCookie("userid", { domain: ".protolylab.digital", secure: true });
   };
 
   return (
