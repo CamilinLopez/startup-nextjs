@@ -19,6 +19,7 @@ export const middleware = async (request: NextRequest) => {
     if (idcookie) id = idcookie.value;
     if (idparams && !id) id = idparams;
 
+    
     try {
       const response = await fetch(
         `${BACK_PRODUCTION_URL}/auth/google/verify?id=${id}`
@@ -29,26 +30,27 @@ export const middleware = async (request: NextRequest) => {
       if (!dataUser.validtoken || !dataUser.isadmin)
         throw new Error(dataUser.error);
 
-      if (dataUser.validtoken && dataUser.isadmin) {
-        let expiredDate = new Date();
-        expiredDate.setTime(expiredDate.getTime() + 1 * 60 * 60 * 1000);
+      // if (dataUser.validtoken && dataUser.isadmin) {
+      //   let expiredDate = new Date();
+      //   expiredDate.setTime(expiredDate.getTime() + 1 * 60 * 60 * 1000);
 
-        cookies.set("userid", dataUser.user.userId, {
-          expires: expiredDate,
-          domain: ".protolylab.digital",
-          secure: true,
-        });
-        cookies.set("token", dataUser.token, {
-          expires: expiredDate,
-          domain: ".protolylab.digital",
-          secure: true,
-        });
-        cookies.set("isadmin", dataUser.isadmin, {
-          expires: expiredDate,
-          domain: ".protolylab.digital",
-          secure: true,
-        });
-      }
+      //   cookies.set("userid", dataUser.user.userId, {
+      //     expires: expiredDate,
+      //     domain: ".protolylab.digital",
+      //     secure: true,
+      //   });
+      //   cookies.set("token", dataUser.token, {
+      //     expires: expiredDate,
+      //     domain: ".protolylab.digital",
+      //     secure: true,
+      //   });
+      //   cookies.set("isadmin", dataUser.isadmin, {
+      //     expires: expiredDate,
+      //     domain: ".protolylab.digital",
+      //     secure: true,
+      //   });
+      // }
+
     } catch (error) {
       return NextResponse.redirect(
         new URL(`${CLIENT_PRODUCTION_URL}`, request.url)
