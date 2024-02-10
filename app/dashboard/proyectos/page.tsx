@@ -35,15 +35,12 @@ export default function Proyectos() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div
-        className="w-full h-auto overflow-y-auto"
-        // style={{ overflowY: "auto" }} // Estilos en línea para cada tarjeta
-      >
+      <div className="w-full h-screen overflow-y-auto">
         {!loading && !error ? (
-          <div className="flex flex-col gap-4 p-6 h-auto">
+          <div className="flex flex-col gap-4 p-6">
             {data?.map((project) => (
               <div
-                className="overflow-y-auto rounded-xl shadow-signUp h-auto w-full"
+                className="overflow-y-auto rounded-xl shadow-signUp w-full"
                 key={project.id}
               >
                 <SingleBlog
