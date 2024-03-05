@@ -32,7 +32,7 @@ const PricingBox = (props: {
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <Link href="https://tally.so/embed/wA2MAo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1">
             <button className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-              Comanezar
+              Comenzar
             </button>
           </Link>
         </div>
