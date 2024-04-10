@@ -16,17 +16,18 @@ import Finish from "@/components/Finish/Finish";
 import { Inter } from "@next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import OnWhatsWidget from "@/components/wiedget";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
   return (
     <>
       <Header />
       <ScrollUp />
       <Hero />
       <Poppup />
+      <OnWhatsWidget />
       <Features />
       <Brands />
       <Blog />
